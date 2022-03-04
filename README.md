@@ -5,7 +5,7 @@ Run the following commands in the terminal with the Dockerfile:
 
 ```
 docker build -t shallot .
-docker run -p 7878:7878 -dit --name shallot_container shallot
+docker run -dit --name shallot_container shallot
 docker exec -it shallot_container bash
 cargo run
 ```
