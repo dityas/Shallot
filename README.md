@@ -10,7 +10,7 @@ docker exec -it shallot_container bash
 cargo run
 ```
 
-Open another terminal and connect to the container again using `docker exec -it [container name] bash`, and within it, type the following command a few times:
+Open another terminal and connect to the container again using `docker exec -it shallot_container bash`, and within it, type the following command a few times:
 
 ```
 curl 127.0.0.1:7878
