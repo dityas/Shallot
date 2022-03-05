@@ -41,13 +41,16 @@ fn handle_request(mut stream: TcpStream) -> Result<(), Error> {
         },
     };
 
+    let addr = stream.peer_addr()?;
+
     let mut request: [u8 ; 4096] = [0 ; 4096];
     let req_bytes = stream.read(&mut request)?;
-    let req_string = request_handler::convert_to_string(&request[0..req_bytes]);
+    
+    let req_string = request_handler::convert_to_string(&request[0..req_bytes]).unwrap();
+    let req_struct = request_handler::get_req_struct(&req_string);
+    
+    println!("Got request {:?} from {:?}", req_struct, addr);
 
-    println!("Got {:?}", req_string);
-
-    let req = request_handler::get_req_struct(req_string);
 
     Ok(())
 }
