@@ -1,7 +1,8 @@
 use std::net::{TcpListener, TcpStream};
-use std::io::Error;
+use std::io::{Error, Read};
 
 use crate::logging;
+use crate::request_handler;
 
 // Create a simple TcpListener for given ip and port
 fn get_listener(ip: &String, port: &String) -> TcpListener {
@@ -26,20 +27,27 @@ fn get_listener(ip: &String, port: &String) -> TcpListener {
 }
 
 
-fn handle_request(stream: TcpStream) -> Result<(), Error> {
+fn handle_request(mut stream: TcpStream) -> Result<(), Error> {
 
-    let addr = match stream.peer_addr() {
+    match stream.peer_addr() {
 
         Ok(addr) => {
+            println!("Got connection from {}", addr);
             logging::log(addr);
-            Some(addr)
         },
 
         Err(e) => {
             eprintln!("Could not get remote address, {}", e);
-            None
         },
     };
+
+    let mut request: [u8 ; 4096] = [0 ; 4096];
+    let req_bytes = stream.read(&mut request)?;
+    let req_string = request_handler::convert_to_string(&request[0..req_bytes]);
+
+    println!("Got {:?}", req_string);
+
+    let req = request_handler::get_req_struct(req_string);
 
     Ok(())
 }
@@ -82,13 +90,6 @@ mod test_proxy_listener {
         let port: String = String::from("8080");
 
         let result = get_listener(&ip, &port);
-    }
-
-    #[test]
-    fn test_run_listener() {
-        
-        println!("Testing listener");
-        run_listener();
     }
 
 }
