@@ -37,7 +37,7 @@ pub fn log(addr: SocketAddr) -> Result <(), Error> {
     
     // This will very likely need to have more added to it as we develop further features, especially for the second
     // deliverable.
-    write!(log_file, "{} | {}\n", addr.to_string(), time.to_string())?;
+    writeln!(log_file, "{} | {}", addr.to_string(), time.to_string())?;
 
     Ok(())
 }
