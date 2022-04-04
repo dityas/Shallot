@@ -42,6 +42,36 @@ pub fn log(addr: SocketAddr) -> Result <(), Error> {
     Ok(())
 }
 
+pub fn event_log(msg: &str) -> Result <(), Error> {
+    let event_file = File::open("event_log.txt");
+
+    match event_file {
+        Ok(file) => file,
+        // This should only need to happen once per place the host happens.
+        Err(error) => match error.kind() {
+            ErrorKind::NotFound => match File::create("event_log.txt") {
+                Ok(fc) => fc,
+                Err(e) => panic!("Problem creating event_log.txt. Reason: {:?}", e),
+            },
+            other_error => {
+                panic!("Problem opening event_log.txt. Reason: {:?}", other_error);
+            },
+        },
+    };
+
+    let mut event_file = OpenOptions::new()
+    .write(true)
+    .append(true)
+    .open("event_log.txt")
+    .unwrap();
+
+    let time: DateTime<Local> = Local::now();
+
+    writeln!(event_file, "{} {}", time.format("[%b %d, %Y; %I:%M %p]").to_string(), msg)?;
+
+    Ok(())
+}
+
 // Sample running of the log server with single listen. Must be run mulitple times to get multiple log lines.
 // Can do away with the warning and this code for deliverable 2.
 #[allow(dead_code)]
