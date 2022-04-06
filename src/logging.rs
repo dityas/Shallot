@@ -8,7 +8,7 @@ use chrono::{DateTime, Local};
 use std::fs::{File, OpenOptions};
 use std::io::{ErrorKind, Write, Error};
 
-pub fn log(addr: SocketAddr) -> Result <(), Error> {
+pub fn log(addr: SocketAddr, connection_result: &str) -> Result <(), Error> {
     // Checking to see if the file exists every time seems like overkill. It maybe better to create log.txt on the 
     // server side.
     let log_file = File::open("log.txt");
@@ -37,7 +37,7 @@ pub fn log(addr: SocketAddr) -> Result <(), Error> {
     
     // This will very likely need to have more added to it as we develop further features, especially for the second
     // deliverable.
-    writeln!(log_file, "{} | {}", addr.to_string(), time.to_string())?;
+    writeln!(log_file, "{} | {} | {}", addr.to_string(), time.to_string(), connection_result)?;
 
     Ok(())
 }
@@ -80,7 +80,7 @@ fn main() {
     match listener.accept() {
         Ok((_socket, addr)) => {
             println!("new client: {:?}", addr);
-            match log(addr) {
+            match log(addr, "OK") {
                 Err(e) => println!("Uncaught issue with the log function: {:?}", e),
                 _ => (),
             };
