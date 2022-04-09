@@ -30,6 +30,7 @@ This request will be accepted. However, if you place the same IP in blacklist.tx
 * **Tokio:** An asynchronous runtime.
 * **URL:** An implementation for the URL standard.
 * **Regex:** A library for regular expressions.
+* **Public Suffix:** A library Mozilla's public suffix list.
 
 ### Deliverable 1
 
