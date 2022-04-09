@@ -13,16 +13,10 @@ cargo run
 Open another terminal and connect to the container again using `docker exec -it shallot_container bash`, and within it, type the following command:
 
 ```
-curl 1.2.3.4
+curl 127.0.0.1:7878
 ```
 
-Note that this request will not be accepted, as it is part of the blacklist. Now type (this is one of Google's IP addresses):
-
-```
-curl 64.233.177.100
-```
-
-This request will be accepted. However, if you place the same IP in blacklist.txt and press enter, then attempt to curl the same IP address, it will be rejected, demonstrating that the blacklist can be updated while the server is running.
+Attempting to curl the server will not work, as the address you are curling from is not part of the whitelist. However, note that in event_log.txt, the attempted connection was recorded and rejected. If you open whitelist.txt and add 127.0.0.1 to the list and press enter, upon saving the file and attempting to curl 127.0.0.1:7878, it will now function, demonstrating that the list may be updated while the server is running.
 
 ### Crates used
 * **Chrono:** Obtains datetime data.
@@ -30,7 +24,7 @@ This request will be accepted. However, if you place the same IP in blacklist.tx
 * **Tokio:** An asynchronous runtime.
 * **URL:** An implementation for the URL standard.
 * **Regex:** A library for regular expressions.
-* **Public Suffix:** A library Mozilla's public suffix list.
+* **Public Suffix:** A library forMozilla's suffix.
 
 ### Deliverable 1
 
