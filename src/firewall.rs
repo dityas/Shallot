@@ -146,13 +146,13 @@ impl Firewall {
 }
 
 
-pub fn malicious_payload(payload: String)->bool{
-    let ipv4re = Regex::new(r"^\d{*}.\d{*}.\d{*}.\d{*}$").unwrap();
-    if payload.contains("http"){
-        Url::parse(payload.into().as_ref()).is_ok();
-        return true;
-    }else if payload.contains(ipv4re){
-        IpAddr::from_str(payload.into().as_ref()).map_or(false, |i| i.is_ipv4());
-        return true;
-    }return false;
-}
+//pub fn malicious_payload(payload: String)->bool{
+//    let ipv4re = Regex::new(r"^\d{*}.\d{*}.\d{*}.\d{*}$").unwrap();
+//    if payload.contains("http"){
+//        Url::parse(payload.into().as_ref()).is_ok();
+//        return true;
+//    }else if payload.contains(ipv4re){
+//        IpAddr::from_str(payload.into().as_ref()).map_or(false, |i| i.is_ipv4());
+//        return true;
+//    }return false;
+//}

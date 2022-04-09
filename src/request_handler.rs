@@ -1,4 +1,6 @@
 
+use reqwest::RequestBuilder;
+
 #[derive(Debug, PartialEq)]
 pub enum HTTPReqKind {
     GET,
@@ -8,16 +10,8 @@ pub enum HTTPReqKind {
 
 #[derive(Debug)]
 pub struct HTTPReq {
-    req_type: HTTPReqKind,
-    req_url: String,
-}
-
-pub fn convert_to_string(byte_array: &[u8]) -> Option<String> {
-
-    match String::from_utf8(byte_array.to_vec()) {
-        Ok(the_string) => Some(the_string),
-        Err(err) => None,
-    }
+    pub req_type: HTTPReqKind,
+    pub req_url: String,
 }
 
 fn get_req_kind(req: &str) -> Option<HTTPReqKind> {
@@ -30,15 +24,9 @@ fn get_req_kind(req: &str) -> Option<HTTPReqKind> {
     }
 }
 
-pub fn get_req_struct(req: &String) -> Option<HTTPReq> {
-    
-    let res = get_http_header(req);
-    let kind = get_req_kind(res[0])?;
+pub fn get_req_struct(req: &[u8]) -> () {
 
-    Some(HTTPReq {
-        req_type: kind,
-        req_url: String::from(res[1]),
-    })
+    ()
 }
 
 
@@ -82,9 +70,9 @@ mod test_req_handler {
     #[test]
     fn test_req_struct() {
         
-        let valid_req: String = String::from("CONNECT push.services.mozilla.com:443 HTTP/1.1\r\nUser-Agent: Mozilla/5.0\r\n");
+        let valid_req = b"CONNECT push.services.mozilla.com:443 HTTP/1.1\r\nUser-Agent: Mozilla/5.0\r\n\r\n";
 
-        let res = get_req_struct(&valid_req);
+        let res = get_req_struct(valid_req);
         println!("res is {:?}", res);
     }
 
