@@ -28,6 +28,8 @@ This request will be accepted. However, if you place the same IP in blacklist.tx
 * **Chrono:** Obtains datetime data.
 * **Hyper:** An HTTP library.
 * **Tokio:** An asynchronous runtime.
+* **URL:** An implementation for the URL standard.
+* **Regex:** A library for regular expressions.
 
 ### Deliverable 1
 
