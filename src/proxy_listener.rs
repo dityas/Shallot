@@ -6,6 +6,7 @@ use std::net::SocketAddr;
 use crate::logging;
 use crate::request_handler;
 use crate::request_handler::HTTPReq;
+use crate::firewall::Firewall;
 
 
 // Req Handling error type
@@ -77,12 +78,33 @@ async fn get_listener(ip: &String, port: &String) -> TcpListener {
 //
 //}
 
+fn firewall_checks(addr: &SocketAddr, fwall: &mut Firewall) -> bool {
+
+    match fwall.in_whitelist(addr.ip().to_string().as_str()) {
+
+        true => {
+            logging::event_log(
+                format!("[Connection event] Got request from {:?}", addr).as_str());
+            true
+        },
+
+        false => {
+            logging::event_log(
+                format!("[Firewall event] {:?} not in whitelist!", addr).as_str());
+
+            false
+        },
+    }
+}
+
 
 async fn process_request(mut stream: &TcpStream, addr: SocketAddr) {
 
     // Log connection event
     logging::event_log(
         format!("[Connection event] Got request from {:?}", addr).as_str());
+
+    println!("Addr is {}", addr.ip().to_string());
 
 }
 
@@ -92,12 +114,15 @@ pub async fn run_listener() -> Result<()>  {
     let port = String::from("7878");
 
     let listener = get_listener(&ip, &port).await;
+    let mut firewall = Firewall::new();
 
     loop {
 
         let (mut stream, addr) = listener.accept().await
             .map_err(|e| ProxyError::IOError(e.to_string()))?;
-    
+
+        let verif = firewall_checks(&addr, &mut firewall);
+
         let _task = task::spawn(async move {
             process_request(&mut stream, addr).await
         });

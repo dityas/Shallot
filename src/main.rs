@@ -1,6 +1,7 @@
 mod logging;
 mod proxy_listener;
 mod request_handler;
+mod firewall;
 
 use tokio::net::TcpListener;
 use tokio::runtime::Runtime;
