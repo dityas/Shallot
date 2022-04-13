@@ -1,11 +1,14 @@
 use tokio::net::{TcpListener, TcpStream};
 use tokio::task;
+
+use hyper::{server::conn::Http, service::service_fn};
+
 use std::io::Read;
 use std::net::SocketAddr;
+use std::rc::Rc;
 
 use crate::logging;
-use crate::request_handler;
-use crate::request_handler::HTTPReq;
+use crate::request_handler::handle_request;
 use crate::firewall::Firewall;
 
 
@@ -45,17 +48,23 @@ async fn get_listener(ip: &String, port: &String) -> TcpListener {
 
 //fn parse_request(mut stream: &TcpStream) -> Result<()> {
 //
-//    // Get addr
-//    let addr = stream.peer_addr().map_err(|e| ReqHandleError::IOError(e.to_string()))?;
+//    let mut _stream = stream.into_std()
+//        .map_err(|e| ProxyError::OtherError("Could not convert to std stream"
+//                .to_string()))?;
+//
+//    _stream.set_nonblocking(false)
+//        .map_err(|e| ProxyError::OtherError("Could not set NON_BLOCKING"
+//                .to_string()))?;
 //
 //    // Read bytes into a buffer
-//    let mut request: [u8 ; 4096] = [0 ; 4096];
-//    let req_bytes = stream
-//        .read(&mut request)
-//        .map_err(|e| ReqHandleError::IOError(e.to_string()))?;
+//    let mut request = Vec::new();
+//    _stream
+//        .read_to_end(&mut request)
+//        .map_err(|e| ProxyError::IOError(e.to_string()))?;
 //
 //    //let mut req = Request::new(&headers);
 //
+//    println!("Got {:?}", request);
 //
 //    // Directly parse the request
 //    //let req_string = String::from_utf8(&request[0..req_bytes])
@@ -98,14 +107,11 @@ fn firewall_checks(addr: &SocketAddr, fwall: &mut Firewall) -> bool {
 }
 
 
-async fn process_request(mut stream: &TcpStream, addr: SocketAddr) {
-
-    // Log connection event
-    logging::event_log(
-        format!("[Connection event] Got request from {:?}", addr).as_str());
-
-    println!("Addr is {}", addr.ip().to_string());
-
+async fn process_request(stream: TcpStream, addr: SocketAddr) {
+   
+    let b = hyper::body::Body::from(stream);
+    // println!("{:?}", b);
+    Http::new().serve_connection(stream, service_fn(handle_request)).await;
 }
 
 pub async fn run_listener() -> Result<()>  {
@@ -118,13 +124,13 @@ pub async fn run_listener() -> Result<()>  {
 
     loop {
 
-        let (mut stream, addr) = listener.accept().await
+        let (stream, addr) = listener.accept().await
             .map_err(|e| ProxyError::IOError(e.to_string()))?;
 
         let verif = firewall_checks(&addr, &mut firewall);
 
         let _task = task::spawn(async move {
-            process_request(&mut stream, addr).await
+            process_request(stream, addr).await
         });
 
         let outcome = _task.await.map_err(|e| ProxyError::OtherError(e.to_string()))?;

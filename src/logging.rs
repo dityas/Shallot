@@ -68,6 +68,9 @@ pub fn event_log(msg: &str) -> Result <(), Error> {
     let time: DateTime<Local> = Local::now();
 
     writeln!(event_file, "{} {}", time.format("[%b %d, %Y; %I:%M %p]").to_string(), msg)?;
+    
+    // For console logging
+    println!("{} {}", time.format("[%b %d, %Y; %I:%M %p]").to_string(), msg);
 
     Ok(())
 }

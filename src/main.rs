@@ -8,6 +8,7 @@ use tokio::runtime::Runtime;
 
 fn main() {
 
+    // Create runtime for async
     let tokio_runtime = match Runtime::new() {
 
         Ok(rt) => {
@@ -20,6 +21,7 @@ fn main() {
         }
     };
 
+    // Block the runtime on the proxy listener
     tokio_runtime.block_on(async {
         match proxy_listener::run_listener().await {
             Ok(res) => {
