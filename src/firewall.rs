@@ -2,10 +2,16 @@ use std::fs::{File};
 use std::fs;
 use std::time::SystemTime;
 use std::io::{prelude::*, BufReader};
-use url::Url;
-use regex::Regex;
-use std::net::IpAddr;
-use std::str::FromStr;
+
+pub enum Event {
+    WhiteListDeny,
+    BlackListDeny,
+    Connection,
+    DataTransfer,
+    ProxyServer,
+    SuspiciousActivity,
+    Uncategorized,
+}
 
 #[derive(Debug, Clone, PartialEq)]
 pub struct Firewall {
@@ -98,17 +104,40 @@ impl Firewall {
     }
 
     fn check_list(&self, list: &str, ip: &str) -> bool {
-        // For now, wildcards are not supported. This simplifies the checking.
+        // Adding another function call to the stack is worse than a bit of repeated code, especially for operations
+        // which have low margin for overhead. The comparison of IPs will be copied between whitelists and blacklists.
+        let split_ip: Vec<&str> = ip.split(".").collect();
+
         if list == "whitelist" {
             for list_ip in self.whitelist.iter() {
-                if list_ip == ip {
+                // True until proven false for each part of the IP comparison. If still true at the end, it's a match.
+                let mut same = true;
+                let split_list_ip: Vec<&str> = list_ip.split(".").collect();
+                for i in 0..split_ip.len() {
+                    if split_ip[i] != split_list_ip[i] && split_list_ip[i] != "*" {
+                        same = false;
+                        break;
+                    }
+                }
+                // This means all pieces matched, either exactly or because of wildcards. This is a hit.
+                if same {
                     return true;
                 }
             }
         }
         else if list == "blacklist" {
             for list_ip in self.blacklist.iter() {
-                if list_ip == ip {
+                // True until proven false for each part of the IP comparison. If still true at the end, it's a match.
+                let mut same = true;
+                let split_list_ip: Vec<&str> = list_ip.split(".").collect();
+                for i in 0..split_ip.len() {
+                    if split_ip[i] != split_list_ip[i] && split_list_ip[i] != "*" {
+                        same = false;
+                        break;
+                    }
+                }
+                // This means all pieces matched, either exactly or because of wildcards. This is a hit.
+                if same {
                     return true;
                 }
             }
@@ -125,7 +154,17 @@ impl Firewall {
         let r = BufReader::new(f);
 
         for line in r.lines() {
-            result.push(line.unwrap());
+            match line {
+                Ok(line) => {
+                    // The line was read in, but the format has to match an IPV4.
+                    let check_fmt: Vec<&str> = line.split(".").collect();
+                    if check_fmt.len() == 4 {
+                        result.push(line);
+                    }
+                }
+                // If something went wrong with reading the line, just skip it.
+                _ => ()
+            };
         }
         
         result
@@ -138,21 +177,19 @@ impl Firewall {
         let r = BufReader::new(f);
 
         for line in r.lines() {
-            result.push(line.unwrap());
+            match line {
+                Ok(line) => {
+                    // The line was read in, but the format has to match an IPV4.
+                    let check_fmt: Vec<&str> = line.split(".").collect();
+                    if check_fmt.len() == 4 {
+                        result.push(line);
+                    }
+                }
+                // If something went wrong with reading the line, just skip it.
+                _ => ()
+            };
         }
         
         result
     }
 }
-
-
-//pub fn malicious_payload(payload: String)->bool{
-//    let ipv4re = Regex::new(r"^\d{*}.\d{*}.\d{*}.\d{*}$").unwrap();
-//    if payload.contains("http"){
-//        Url::parse(payload.into().as_ref()).is_ok();
-//        return true;
-//    }else if payload.contains(ipv4re){
-//        IpAddr::from_str(payload.into().as_ref()).map_or(false, |i| i.is_ipv4());
-//        return true;
-//    }return false;
-//}
