@@ -8,6 +8,16 @@ use chrono::{DateTime, Local};
 use std::fs::{File, OpenOptions};
 use std::io::{ErrorKind, Write, Error};
 
+pub enum Event {
+    WhiteListDeny,
+    BlackListDeny,
+    Connection,
+    DataTransfer,
+    ProxyServer,
+    SuspiciousActivity,
+    Uncategorized,
+}
+
 pub fn log(addr: SocketAddr, connection_result: &str) -> Result <(), Error> {
     // Checking to see if the file exists every time seems like overkill. It maybe better to create log.txt on the 
     // server side.
@@ -42,7 +52,7 @@ pub fn log(addr: SocketAddr, connection_result: &str) -> Result <(), Error> {
     Ok(())
 }
 
-pub fn event_log(msg: &str) -> Result <(), Error> {
+pub fn event_log(event: Event, msg: &str) -> Result <(), Error> {
     let event_file = File::open("event_log.txt");
 
     match event_file {
@@ -67,7 +77,20 @@ pub fn event_log(msg: &str) -> Result <(), Error> {
 
     let time: DateTime<Local> = Local::now();
 
-    writeln!(event_file, "{} {}", time.format("[%b %d, %Y; %I:%M %p]").to_string(), msg)?;
+    let mut event_msg = String::new();
+
+    match event {
+        Event::BlackListDeny => event_msg += "Blacklist Deny",
+        Event::WhiteListDeny => event_msg += "Whitelist Deny",
+        Event::Connection => event_msg += "Connection",
+        Event::DataTransfer => event_msg += "Data Transfer",
+        Event::ProxyServer => event_msg += "Proxy Server",
+        Event::SuspiciousActivity => event_msg += "Suspicious Activity",
+        Event::Uncategorized => event_msg += "Uncategorized",
+        _ => event_msg += "Uncategorized",
+    };
+
+    writeln!(event_file, "{} {}: {}", time.format("[%b %d, %Y; %I:%M %p]").to_string(), event_msg, msg)?;
 
     Ok(())
 }
