@@ -1,15 +1,15 @@
 use tokio::net::{TcpListener, TcpStream};
 use tokio::task;
 
-use hyper::{server::conn::Http, service::service_fn};
-
 use std::io::Read;
 use std::net::SocketAddr;
 use std::rc::Rc;
 
+use httparse::{EMPTY_HEADER, Request};
+
 use crate::logging;
-use crate::request_handler::handle_request;
 use crate::firewall::Firewall;
+use crate::request_handler::process_request;
 
 
 // Req Handling error type
@@ -45,73 +45,23 @@ async fn get_listener(ip: &String, port: &String) -> TcpListener {
     listener_handler
 }
 
-
-//fn parse_request(mut stream: &TcpStream) -> Result<()> {
-//
-//    let mut _stream = stream.into_std()
-//        .map_err(|e| ProxyError::OtherError("Could not convert to std stream"
-//                .to_string()))?;
-//
-//    _stream.set_nonblocking(false)
-//        .map_err(|e| ProxyError::OtherError("Could not set NON_BLOCKING"
-//                .to_string()))?;
-//
-//    // Read bytes into a buffer
-//    let mut request = Vec::new();
-//    _stream
-//        .read_to_end(&mut request)
-//        .map_err(|e| ProxyError::IOError(e.to_string()))?;
-//
-//    //let mut req = Request::new(&headers);
-//
-//    println!("Got {:?}", request);
-//
-//    // Directly parse the request
-//    //let req_string = String::from_utf8(&request[0..req_bytes])
-//    //    .map_err(|e| ReqHandleError::ParseError(e.to_string()))?;
-//    //let req_struct = request_handler::get_req_struct(&req_string)
-//    //    .ok_or(ReqHandleError::ParseError("While making req_struct".to_string()))?;
-//
-//    // Log successful connections
-//    //println!("Got request {:?} from {:?}", req_struct, addr);
-//    //logging::event_log(format!("[+] Verified Request of type {:?} from {:?}", 
-//    //        req_struct.req_type, addr).as_str());
-//
-//    // return parsed struct
-//    Ok(())
-//}
-
-
-//fn forward_request(req: &HTTPReq) -> Result<()> {
-//
-//
-//}
-
-fn firewall_checks(addr: &SocketAddr, fwall: &mut Firewall) -> bool {
+fn whitelist_check(addr: &SocketAddr, fwall: &mut Firewall) -> bool {
 
     match fwall.in_whitelist(addr.ip().to_string().as_str()) {
 
         true => {
             logging::event_log(
-                format!("[Connection event] Got request from {:?}", addr).as_str());
+                format!("[Connection event] Got request from {:?}", addr.ip()).as_str());
             true
         },
 
         false => {
             logging::event_log(
-                format!("[Firewall event] {:?} not in whitelist!", addr).as_str());
+                format!("[Firewall event] {} not in whitelist!", addr.ip()).as_str());
 
             false
         },
     }
-}
-
-
-async fn process_request(stream: TcpStream, addr: SocketAddr) {
-   
-    let b = hyper::body::Body::from(stream);
-    // println!("{:?}", b);
-    Http::new().serve_connection(stream, service_fn(handle_request)).await;
 }
 
 pub async fn run_listener() -> Result<()>  {
@@ -125,15 +75,20 @@ pub async fn run_listener() -> Result<()>  {
     loop {
 
         let (stream, addr) = listener.accept().await
-            .map_err(|e| ProxyError::IOError(e.to_string()))?;
+            .map_err(|e| ProxyError::IOError(format!("Error: {:?}", e)))?;
 
-        let verif = firewall_checks(&addr, &mut firewall);
+        //match whitelist_check(&addr, &mut firewall) {
+        match true {
 
-        let _task = task::spawn(async move {
-            process_request(stream, addr).await
-        });
+            true => {
+                process_request(&stream).await;
+            },
 
-        let outcome = _task.await.map_err(|e| ProxyError::OtherError(e.to_string()))?;
+            false => {
+                logging::event_log(
+                    format!("[Request denied] Sending reset to {}", addr.ip()).as_str());
+            },
+        }
     }
 }
 
