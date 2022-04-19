@@ -1,5 +1,6 @@
 use tokio::net::{TcpListener, TcpStream};
 use tokio::task;
+use std::str;
 use std::io::Read;
 use std::net::SocketAddr;
 
@@ -7,6 +8,7 @@ use crate::logging;
 use crate::request_handler;
 use crate::request_handler::HTTPReq;
 use crate::firewall::Firewall;
+use std::io;
 
 
 // Req Handling error type
@@ -83,13 +85,13 @@ fn firewall_checks(addr: &SocketAddr, fwall: &mut Firewall) -> bool {
     match fwall.in_whitelist(addr.ip().to_string().as_str()) {
 
         true => {
-            logging::event_log(
+            logging::event_log(logging::Event::Connection,
                 format!("[Connection event] Got request from {:?}", addr).as_str());
             true
         },
 
         false => {
-            logging::event_log(
+            logging::event_log(logging::Event::Connection,
                 format!("[Firewall event] {:?} not in whitelist!", addr).as_str());
 
             false
@@ -97,15 +99,44 @@ fn firewall_checks(addr: &SocketAddr, fwall: &mut Firewall) -> bool {
     }
 }
 
+async fn get_payload(stream: &TcpStream) -> String {
+    let mut data = String::new();
+
+    loop {
+        // Wait for the socket to be readable
+        stream.readable().await;
+
+        // Creating the buffer **after** the `await` prevents it from
+        // being stored in the async task.
+        let mut buf = [0; 4096];
+        // Try to read data, this may still fail with `WouldBlock`
+        // if the readiness event is a false positive.
+        match stream.try_read(&mut buf) {
+            Ok(0) => break,
+            Ok(n) => {
+                println!("read {} bytes", n);
+                data.push_str(str::from_utf8(&buf).unwrap_or("No data"));
+            }
+            Err(ref e) if e.kind() == io::ErrorKind::WouldBlock => {
+                continue;
+            }
+            Err(e) => {
+                println!("Error {}", e);
+            }
+        }
+    }
+
+    return data;
+}
+
 
 async fn process_request(mut stream: &TcpStream, addr: SocketAddr) {
 
     // Log connection event
-    logging::event_log(
+    logging::event_log(logging::Event::Connection,
         format!("[Connection event] Got request from {:?}", addr).as_str());
 
     println!("Addr is {}", addr.ip().to_string());
-
 }
 
 pub async fn run_listener() -> Result<()>  {
@@ -122,6 +153,10 @@ pub async fn run_listener() -> Result<()>  {
             .map_err(|e| ProxyError::IOError(e.to_string()))?;
 
         let verif = firewall_checks(&addr, &mut firewall);
+
+        let payload = get_payload(&stream).await;
+
+        let verify_request_payload = firewall.verify_payload(&payload);
 
         let _task = task::spawn(async move {
             process_request(&mut stream, addr).await

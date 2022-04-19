@@ -2,6 +2,9 @@ use std::fs::{File};
 use std::fs;
 use std::time::SystemTime;
 use std::io::{prelude::*, BufReader};
+use regex::Regex;
+use crate::payload_verification;
+use crate::payload_verification::{verify_http, verify_host, verify_payload};
 
 pub enum Event {
     WhiteListDeny,
@@ -191,5 +194,34 @@ impl Firewall {
         }
         
         result
+    }
+
+    pub fn verify_payload(&mut self, payload: &str) -> bool {
+        if !verify_http(payload) {
+            println!("Failed http test");
+            return false;
+        }
+
+        let host_re = Regex::new(r"Host: (.*)").unwrap();
+        let mut count_hosts = 0;
+        for cap_host in host_re.captures_iter(payload) {
+            count_hosts += 1;
+            if !verify_host(cap_host[1].to_string().trim().to_string()) {
+                println!("Failed host test");
+                return false;
+            }
+        }
+        // Check if the payload consists of exactly 1 host
+        if count_hosts != 1 {
+            println!("Failed host count test. Count: {}", count_hosts);
+            return false;
+        }
+
+        if !verify_payload(payload) {
+            println!("Failed payload test");
+            return false;
+        }
+
+        return true;
     }
 }

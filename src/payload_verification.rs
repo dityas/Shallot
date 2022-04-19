@@ -1,58 +1,36 @@
 use publicsuffix::List;
+use regex::Regex;
 
-pub fn malicious_url(payload: &String)->bool{
-    
-    if check_url(payload) || check_host(payload) || check_str(payload) {
-        println!("{}", true);
+pub fn verify_host(host: String) -> bool {
+    if host.starts_with("localhost") {
+        println!("Skipping verify host check for local host.");
         return true;
     }
-    println!("{}", false);
-    return false;
-}
-
-pub fn check_url(payload: &String)->bool{
     let list = List::fetch().unwrap();
-    let mut url = payload.as_str();
-    let items = url.split(".");
-    println!("Case1:");
-    for i in items.into_iter() {
-        println!("label Name: {}", i);
-        println!("label Len : {}", i.len());
+    let domain = list.parse_domain(&host).unwrap();
+
+    if !domain.is_icann() {
+        println!("Is not icann");
+        return false;
     }
-    let domain = list.parse_url(url);
-            match domain {
-                Err(_) =>  false,
-                Ok(result) => true
+    if domain.is_private() {
+        println!("Is private");
+        return false;
     }
+
+    return true;
 }
 
-pub fn check_host(payload: &String)->bool{
-    let list = List::fetch().unwrap();
-    let mut url = payload.as_str();
-    let items = url.split(".");
-    println!("Case1:");
-    for i in items.into_iter() {
-        println!("label Name: {}", i);
-        println!("label Len : {}", i.len());
+pub fn verify_payload(payload: &str) -> bool {
+    const THRESHOLD: usize = 10000;
+    // Check of large payloads
+    if payload.len() > THRESHOLD {
+        return false;
     }
-    let domain = list.parse_host(url);
-            match domain {
-                Err(_) =>  false,
-                Ok(result) => true
-    }
-
+    return true;
 }
 
-pub fn check_str(payload: &String)->bool{
-    let list = List::fetch().unwrap();
-    let mut url = payload.as_str();
-    
-    let domain = list.parse_str(url);
-            match domain {
-                Err(_) =>  false,
-                Ok(result) => true
-    }
-
+pub fn verify_http(payload: &str) -> bool {
+    let http_re = Regex::new(r"^[A-Z]+ /.* HTTP/[\d]+\.[\d]+$").unwrap();
+    return !http_re.is_match(payload);
 }
-
-
