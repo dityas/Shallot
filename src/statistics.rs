@@ -11,18 +11,9 @@ use regex::Regex;
 pub fn generate_statistics() {
     File::create("./statistics.txt").expect("Unable to create statistics file.");
     let wait_time = time::Duration::from_secs(5);
-    /*
 
-    WhiteListDeny,
-    BlackListDeny,
-    Connection,
-    DataTransfer,
-    ProxyServer,
-    SuspiciousActivity,
-    Uncategorized,
-     */
     loop {
-        let mut log = fs::read_to_string("./log.txt").expect("Unable to read log.txt");
+        let mut log = fs::read_to_string("./event_log.txt").expect("Unable to read log.txt");
         let mut whitelist_deny = 0;
         let mut blacklist_deny = 0;
         let mut connection = 0;
