@@ -2,9 +2,12 @@ mod logging;
 mod proxy_listener;
 mod request_handler;
 mod firewall;
+mod payload_verification;
+mod statistics;
 
 use tokio::net::TcpListener;
 use tokio::runtime::Runtime;
+use crate::statistics::generate_statistics;
 
 fn main() {
 
@@ -19,6 +22,10 @@ fn main() {
             panic!("[!!!] Could not spawn tokio runtime: {}", e);
         }
     };
+
+    tokio_runtime.spawn(async {
+       generate_statistics();
+    });
 
     tokio_runtime.block_on(async {
         match proxy_listener::run_listener().await {
