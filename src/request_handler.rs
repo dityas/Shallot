@@ -25,19 +25,9 @@ pub enum ReqType {
     GET(String),
 }
 
-impl std::fmt::Display for ReqType {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        match self {
-            ReqType::CONNECT(a) => write!(f, "ReqType::CONNECT({})", a),
-            ReqType::GET(a) => write!(f, "ReqType::GET({})", a),
-        }
-    }
-}
-
 /// Determine request type. Get the raw request and parse it into
 /// a ReqType.
 fn determine_request(buf: &[u8]) -> Result<ReqType> {
-    let len = buf.len();
     let mut headers = [EMPTY_HEADER; 4096];
     let mut req = Request::new(&mut headers);
     let res = req
@@ -95,127 +85,103 @@ fn read_from_tcpstream(stream: &mut TcpStream, buf: &mut [u8]) -> Result<usize> 
     }
 }
 
-fn tunnel_bytes(s_stream: &mut TcpStream, t_stream: &mut TcpStream) -> usize {
-    let mut bytes_transferred = 0usize;
+/// Forward data back and forth between source and target using the TunnelBuffer struct
+struct TunnelBuffer(usize, [u8; 10240]);
 
-    let mut source_to_target_buf = [0u8; 4096];
-    let mut target_to_source_buf = [0u8; 4096];
+fn tunnel_through(
+    tunnel_buf: &mut TunnelBuffer,
+    src: &mut TcpStream,
+    dst: &mut TcpStream,
+) -> Result<usize> {
+    let mut result = Ok(0usize);
 
-    let mut source_bytes = 0usize;
-    let mut target_bytes = 0usize;
+    // if tunnel buffer is empty, read from src
+    if tunnel_buf.0 == 0 {
+        match read_from_tcpstream(src, &mut tunnel_buf.1) {
+            Ok(0) => {
+                result = Err(ProxyError::StreamClosed);
+            }
+            Ok(n) => {
+                tunnel_buf.0 = n;
+            }
+            Err(ProxyError::IOBlocked) => {}
+            Err(_) => {
+                result = Err(ProxyError::StreamClosed);
+            }
+        };
+    }
 
+    // if tunnel buffer was modified, write it to dst
+    if tunnel_buf.0 > 0 {
+        match write_to_tcpstream(dst, &mut tunnel_buf.1[0..tunnel_buf.0]) {
+            Ok(0) => {
+                result = Err(ProxyError::StreamClosed);
+            }
+            Ok(n) => {
+                logging::event_log(
+                    format!(
+                        "{} of {} bytes sent from {} to {}",
+                        n,
+                        tunnel_buf.0,
+                        src.peer_addr()
+                            .map_err(|_| ProxyError::Other("".to_owned()))?
+                            .ip(),
+                        dst.peer_addr()
+                            .map_err(|_| ProxyError::Other("".to_owned()))?
+                            .ip()
+                    )
+                    .as_str(),
+                );
+
+                result = Ok(n);
+                tunnel_buf.0 = 0;
+            }
+            Err(ProxyError::IOBlocked) => {}
+            Err(_) => {
+                result = Err(ProxyError::StreamClosed);
+            }
+        };
+    }
+
+    result
+}
+
+fn tunnel(s_stream: &mut TcpStream, t_stream: &mut TcpStream) -> usize {
+    let mut total_bytes = 0usize;
+
+    // Init buffers for tunneling
+    let mut source_buf = TunnelBuffer(0usize, [0; 10240]);
+    let mut target_buf = TunnelBuffer(0usize, [0; 10240]);
+
+    // Set both streams to non blocking
     s_stream.set_nonblocking(true);
     t_stream.set_nonblocking(true);
 
-    // Tunnel request
     loop {
-        // Read from source into buf
-        if source_bytes == 0 {
-            match read_from_tcpstream(s_stream, &mut source_to_target_buf) {
-                Ok(0) => {
-                    t_stream.shutdown(Shutdown::Both);
-                    break;
-                }
-                Ok(n) => {
-                    //logging::event_log(
-                    //    format!(
-                    //        "{} bytes read from {}",
-                    //        n,
-                    //        s_stream.local_addr().unwrap().ip()
-                    //    )
-                    //    .as_str(),
-                    //);
+        match tunnel_through(&mut source_buf, s_stream, t_stream) {
+            Ok(n) => {
+                total_bytes += n;
+            }
+            Err(_) => {
+                s_stream.shutdown(Shutdown::Both);
+                t_stream.shutdown(Shutdown::Both);
+                break;
+            }
+        };
 
-                    source_bytes = n;
-                }
-                Err(ProxyError::IOBlocked) => {}
-                Err(e) => {
-                    t_stream.shutdown(Shutdown::Both);
-                    break;
-                }
-            };
-        }
-
-        if source_bytes > 0 {
-            match write_to_tcpstream(t_stream, &mut source_to_target_buf[0..source_bytes]) {
-                Ok(0) => {
-                    s_stream.shutdown(Shutdown::Both);
-                    break;
-                }
-                Ok(n) => {
-                    //logging::event_log(
-                    //    format!(
-                    //        "{} bytes written to {}",
-                    //        n,
-                    //        t_stream.peer_addr().unwrap().ip()
-                    //    )
-                    //    .as_str(),
-                    //);
-                    bytes_transferred += source_bytes;
-                    source_bytes = 0;
-                }
-                Err(ProxyError::IOBlocked) => {}
-                Err(e) => {
-                    s_stream.shutdown(Shutdown::Both);
-                    break;
-                }
-            };
-        }
-
-        // Read from target
-        if target_bytes == 0 {
-            match read_from_tcpstream(t_stream, &mut target_to_source_buf) {
-                Ok(0) => {
-                    s_stream.shutdown(Shutdown::Both);
-                    break;
-                }
-                Ok(n) => {
-                    target_bytes = n;
-                    //logging::event_log(
-                    //    format!(
-                    //        "{} bytes read from {}",
-                    //        n,
-                    //        t_stream.peer_addr().unwrap().ip()
-                    //    )
-                    //    .as_str(),
-                    //);
-                }
-                Err(ProxyError::IOBlocked) => {}
-                Err(e) => {
-                    s_stream.shutdown(Shutdown::Both);
-                    break;
-                }
-            };
-        }
-
-        if target_bytes > 0 {
-            match write_to_tcpstream(s_stream, &mut target_to_source_buf[0..target_bytes]) {
-                Ok(0) => {
-                    t_stream.shutdown(Shutdown::Both);
-                    break;
-                }
-                Ok(n) => {
-                    bytes_transferred += target_bytes;
-                    target_bytes = 0;
-                    //logging::event_log(
-                    //    format!(
-                    //        "{} bytes writte to {}",
-                    //        n,
-                    //        s_stream.local_addr().unwrap().ip()
-                    //    )
-                    //    .as_str(),
-                    //);
-                }
-                Err(ProxyError::IOBlocked) => {}
-                Err(e) => {
-                    t_stream.shutdown(Shutdown::Both);
-                    break;
-                }
-            };
-        }
+        match tunnel_through(&mut target_buf, t_stream, s_stream) {
+            Ok(n) => {
+                total_bytes += n;
+            }
+            Err(_) => {
+                s_stream.shutdown(Shutdown::Both);
+                t_stream.shutdown(Shutdown::Both);
+                break;
+            }
+        };
     }
 
-    bytes_transferred
+    total_bytes
 }
 
 pub fn process_connection(stream: &mut TcpStream) -> Result<()> {
@@ -226,25 +192,40 @@ pub fn process_connection(stream: &mut TcpStream) -> Result<()> {
             logging::event_log(&format!("[CONNECT Request] for {}", p));
 
             let mut t_stream = get_target_stream(&p)?;
-            t_stream.set_nodelay(true);
-            let res = write_to_tcpstream(stream, HTTP_OK)?;
+
+            // Respond with 200 OK
+            let _res = write_to_tcpstream(stream, HTTP_OK)?;
+            let dst_addr = t_stream
+                .peer_addr()
+                .map_err(|e| ProxyError::Other(format!("{:?}", e)))?
+                .ip();
+
+            let src_addr = stream
+                .peer_addr()
+                .map_err(|e| ProxyError::Other(format!("{:?}", e)))?
+                .ip();
 
             logging::event_log(&format!("[Connection established]"));
 
-            let n = tunnel_bytes(stream, &mut t_stream);
-            logging::event_log(&format!("[Tunnel] {} bytes exchanged", n));
+            let n = tunnel(stream, &mut t_stream);
+            logging::event_log(&format!(
+                "[Tunnel] Total {} bytes exchanged between {} and {}",
+                n, src_addr, dst_addr
+            ));
+
+            Ok(())
         }
 
         Ok(ReqType::GET(p)) => {
             logging::event_log(&format!("[GET Request] for {}", p));
+            Ok(())
         }
 
         Err(e) => {
             logging::event_log(&format!("[{:?}] while parsing request", e));
+            Err(e)
         }
     }
-
-    Ok(())
 }
 
 #[cfg(test)]

@@ -73,3 +73,916 @@
 [Apr 25, 2022; 12:35 AM] [Tunnel] 6267 bytes exchanged
 [Apr 25, 2022; 12:35 AM] [Tunnel] 8428 bytes exchanged
 [Apr 25, 2022; 12:35 AM] [Tunnel] 5355 bytes exchanged
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [CONNECT Request] for content-signature-2.cdn.mozilla.net:443
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [Connection established]
+[Apr 25, 2022; 12:49 AM] [Tunnel] 0 bytes exchanged between 172.20.242.4 and 13.32.66.45
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:49 AM] [CONNECT Request] for services.addons.mozilla.org:443
+[Apr 25, 2022; 12:49 AM] [CONNECT Request] for services.addons.mozilla.org:443
+[Apr 25, 2022; 12:49 AM] [CONNECT Request] for push.services.mozilla.com:443
+[Apr 25, 2022; 12:49 AM][Apr 25, 2022; 12:49 AM]  [Connection established][Connection established]
+
+[Apr 25, 2022; 12:49 AM] [Connection established]
+[Apr 25, 2022; 12:49 AM] [Tunnel] 8419 bytes exchanged between 172.20.242.4 and 54.230.250.126
+[Apr 25, 2022; 12:49 AM] [CONNECT Request] for firefox.settings.services.mozilla.com:443
+[Apr 25, 2022; 12:49 AM] [Connection established]
+[Apr 25, 2022; 12:49 AM] [Tunnel] 0 bytes exchanged between 172.20.242.4 and 54.230.31.32
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://thinc.cs.uga.edu/
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://thinc.cs.uga.edu/
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://thinc.cs.uga.edu/
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://thinc.cs.uga.edu/
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://thinc.cs.uga.edu/
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://thinc.cs.uga.edu/
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://thinc.cs.uga.edu/
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://thinc.cs.uga.edu/
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://thinc.cs.uga.edu/
+[Apr 25, 2022; 12:49 AM] [GET Request] for http://thinc.cs.uga.edu/
+[Apr 25, 2022; 12:50 AM] [CONNECT Request] for youtube.com:443
+[Apr 25, 2022; 12:50 AM] [Connection established]
+[Apr 25, 2022; 12:50 AM] [CONNECT Request] for www.youtube.com:443
+[Apr 25, 2022; 12:50 AM] [Connection established]
+[Apr 25, 2022; 12:50 AM] [CONNECT Request] for i.ytimg.com:443
+[Apr 25, 2022; 12:50 AM] [Connection established]
+[Apr 25, 2022; 12:50 AM] [CONNECT Request] for fonts.googleapis.com:443
+[Apr 25, 2022; 12:50 AM] [Connection established]
+[Apr 25, 2022; 12:50 AM] [Tunnel] 0 bytes exchanged between 172.20.242.4 and 108.177.122.95
+[Apr 25, 2022; 12:50 AM] [CONNECT Request] for fonts.gstatic.com:443
+[Apr 25, 2022; 12:50 AM] [Connection established]
+[Apr 25, 2022; 12:50 AM] [Tunnel] 0 bytes exchanged between 172.20.242.4 and 74.125.138.94
+[Apr 25, 2022; 12:50 AM] [CONNECT Request] for accounts.google.com:443
+[Apr 25, 2022; 12:50 AM] [Connection established]
+[Apr 25, 2022; 12:50 AM] [CONNECT Request] for googleads.g.doubleclick.net:443
+[Apr 25, 2022; 12:50 AM] [Connection established]
+[Apr 25, 2022; 12:50 AM] [CONNECT Request] for fonts.gstatic.com:443
+[Apr 25, 2022; 12:50 AM] [Connection established]
+[Apr 25, 2022; 12:50 AM] [Tunnel] 0 bytes exchanged between 172.20.242.4 and 74.125.138.94
+[Apr 25, 2022; 12:50 AM] [CONNECT Request] for fonts.gstatic.com:443
+[Apr 25, 2022; 12:50 AM] [Connection established]
+[Apr 25, 2022; 12:50 AM] [Tunnel] 0 bytes exchanged between 172.20.242.4 and 74.125.138.94
+[Apr 25, 2022; 12:50 AM] [CONNECT Request] for www.gstatic.com:443
+[Apr 25, 2022; 12:50 AM] [Connection established]
+[Apr 25, 2022; 12:50 AM] [StreamClosed] while parsing request
+[Apr 25, 2022; 12:50 AM] [CONNECT Request] for yt3.ggpht.com:443
+[Apr 25, 2022; 12:50 AM] [CONNECT Request] for yt3.ggpht.com:443
+[Apr 25, 2022; 12:50 AM] [Connection established]
+[Apr 25, 2022; 12:50 AM] [Connection established]
+[Apr 25, 2022; 12:50 AM] [CONNECT Request] for fonts.gstatic.com:443
+[Apr 25, 2022; 12:50 AM] [Tunnel] 13660 bytes exchanged between 172.20.242.4 and 142.250.176.65
+[Apr 25, 2022; 12:50 AM] [Connection established]
+[Apr 25, 2022; 12:50 AM] [Tunnel] 0 bytes exchanged between 172.20.242.4 and 74.125.138.94
+[Apr 25, 2022; 12:50 AM] [CONNECT Request] for www.google.com:443
+[Apr 25, 2022; 12:50 AM] [Connection established]
+[Apr 25, 2022; 12:50 AM] [StreamClosed] while parsing request
+[Apr 25, 2022; 12:50 AM] [CONNECT Request] for jnn-pa.googleapis.com:443
+[Apr 25, 2022; 12:50 AM] [CONNECT Request] for static.doubleclick.net:443
+[Apr 25, 2022; 12:50 AM] [Connection established]
+[Apr 25, 2022; 12:50 AM] [Connection established]
+[Apr 25, 2022; 12:50 AM] [CONNECT Request] for fonts.googleapis.com:443
+[Apr 25, 2022; 12:50 AM] [CONNECT Request] for fonts.googleapis.com:443
+[Apr 25, 2022; 12:50 AM] [Connection established]
+[Apr 25, 2022; 12:50 AM] [Connection established]
+[Apr 25, 2022; 12:50 AM] [Tunnel] 7935 bytes exchanged between 172.20.242.4 and 108.177.122.95
+[Apr 25, 2022; 12:50 AM] [CONNECT Request] for youtube.com:443
+[Apr 25, 2022; 12:50 AM] [Connection established]
+[Apr 25, 2022; 12:50 AM] [CONNECT Request] for rr1---sn-nv0uixgo-5uae.googlevideo.com:443
+[Apr 25, 2022; 12:50 AM] [CONNECT Request] for rr1---sn-nv0uixgo-5uae.googlevideo.com:443
+[Apr 25, 2022; 12:50 AM] [Connection established]
+[Apr 25, 2022; 12:50 AM] [Connection established]
+[Apr 25, 2022; 12:50 AM] [CONNECT Request] for i1.ytimg.com:443
+[Apr 25, 2022; 12:50 AM] [Connection established]
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 12:50 AM] [Tunnel] 5417 bytes exchanged between 172.20.242.4 and 44.241.107.50
+[Apr 25, 2022; 12:50 AM] [Tunnel] 492042 bytes exchanged between 172.20.242.4 and 143.215.193.204
+[Apr 25, 2022; 12:50 AM] [Tunnel] 33517 bytes exchanged between 172.20.242.4 and 64.233.177.95
+[Apr 25, 2022; 12:50 AM] [Tunnel] 22693 bytes exchanged between 172.20.242.4 and 142.250.176.65
+[Apr 25, 2022; 12:50 AM] [Tunnel] 7942 bytes exchanged between 172.20.242.4 and 64.233.177.154
+[Apr 25, 2022; 12:50 AM] [Tunnel] 74690 bytes exchanged between 172.20.242.4 and 143.215.193.204
+[Apr 25, 2022; 12:50 AM] [Tunnel] 342706 bytes exchanged between 172.20.242.4 and 173.194.219.119
+[Apr 25, 2022; 12:50 AM] [Tunnel] 108080 bytes exchanged between 172.20.242.4 and 142.250.177.3
+[Apr 25, 2022; 12:50 AM] [Tunnel] 8517 bytes exchanged between 172.20.242.4 and 54.230.250.126
+[Apr 25, 2022; 12:50 AM] [Tunnel] 6998 bytes exchanged between 172.20.242.4 and 108.177.122.149
+[Apr 25, 2022; 12:50 AM] [Tunnel] 255464 bytes exchanged between 172.20.242.4 and 64.233.177.93
+[Apr 25, 2022; 12:50 AM] [Tunnel] 8294 bytes exchanged between 172.20.242.4 and 108.177.122.95
+[Apr 25, 2022; 12:50 AM] [Tunnel] 7410 bytes exchanged between 172.20.242.4 and 108.177.122.99
+[Apr 25, 2022; 12:50 AM] [Tunnel] 38637 bytes exchanged between 172.20.242.4 and 64.233.185.102
+[Apr 25, 2022; 12:50 AM] [Tunnel] 76787 bytes exchanged between 172.20.242.4 and 74.125.136.84
+[Apr 25, 2022; 12:50 AM] [Tunnel] 9272 bytes exchanged between 172.20.242.4 and 64.233.177.93
+[Apr 25, 2022; 12:50 AM] [Tunnel] 9259 bytes exchanged between 172.20.242.4 and 64.233.177.136
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [CONNECT Request] for content-signature-2.cdn.mozilla.net:443
+[Apr 25, 2022; 01:55 AM] [Connection established]
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:55 AM] [CONNECT Request] for services.addons.mozilla.org:443
+[Apr 25, 2022; 01:55 AM] [CONNECT Request] for services.addons.mozilla.org:443
+[Apr 25, 2022; 01:55 AM][Apr 25, 2022; 01:55 AM]  [Connection established][Connection established]
+
+[Apr 25, 2022; 01:55 AM] 208 of 208 bytes sent from 127.0.0.1 to 54.230.250.8
+[Apr 25, 2022; 01:55 AM] 208 of 208 bytes sent from 127.0.0.1 to 54.230.250.8
+[Apr 25, 2022; 01:55 AM] 3592 of 3592 bytes sent from 54.230.250.8 to 127.0.0.1
+[Apr 25, 2022; 01:55 AM] 583 of 583 bytes sent from 54.230.250.8 to 127.0.0.1
+[Apr 25, 2022; 01:55 AM] 93 of 93 bytes sent from 127.0.0.1 to 54.230.250.8
+[Apr 25, 2022; 01:55 AM] 2694 of 2694 bytes sent from 54.230.250.8 to 127.0.0.1
+[Apr 25, 2022; 01:55 AM] 1481 of 1481 bytes sent from 54.230.250.8 to 127.0.0.1
+[Apr 25, 2022; 01:55 AM] 171 of 171 bytes sent from 54.230.250.8 to 127.0.0.1
+[Apr 25, 2022; 01:55 AM] 93 of 93 bytes sent from 127.0.0.1 to 54.230.250.8
+[Apr 25, 2022; 01:55 AM] 914 of 914 bytes sent from 127.0.0.1 to 54.230.250.8
+[Apr 25, 2022; 01:55 AM] 69 of 69 bytes sent from 54.230.250.8 to 127.0.0.1
+[Apr 25, 2022; 01:55 AM] 38 of 38 bytes sent from 127.0.0.1 to 54.230.250.8
+[Apr 25, 2022; 01:55 AM] 171 of 171 bytes sent from 54.230.250.8 to 127.0.0.1
+[Apr 25, 2022; 01:55 AM] 38 of 38 bytes sent from 54.230.250.8 to 127.0.0.1
+[Apr 25, 2022; 01:55 AM] 69 of 69 bytes sent from 54.230.250.8 to 127.0.0.1
+[Apr 25, 2022; 01:55 AM] 952 of 952 bytes sent from 127.0.0.1 to 54.230.250.8
+[Apr 25, 2022; 01:55 AM] 38 of 38 bytes sent from 54.230.250.8 to 127.0.0.1
+[Apr 25, 2022; 01:55 AM] [CONNECT Request] for shavar.services.mozilla.com:443
+[Apr 25, 2022; 01:55 AM] [CONNECT Request] for push.services.mozilla.com:443
+[Apr 25, 2022; 01:55 AM] 2641 of 2641 bytes sent from 54.230.250.8 to 127.0.0.1
+[Apr 25, 2022; 01:55 AM] 2637 of 2637 bytes sent from 54.230.250.8 to 127.0.0.1
+[Apr 25, 2022; 01:55 AM] 77 of 77 bytes sent from 127.0.0.1 to 54.230.250.8
+[Apr 25, 2022; 01:55 AM] [Tunnel] 8420 bytes exchanged between 127.0.0.1 and 54.230.250.8
+[Apr 25, 2022; 01:55 AM] [Connection established]
+[Apr 25, 2022; 01:55 AM] 517 of 517 bytes sent from 127.0.0.1 to 52.40.110.104
+[Apr 25, 2022; 01:55 AM] [Connection established]
+[Apr 25, 2022; 01:55 AM] 517 of 517 bytes sent from 127.0.0.1 to 34.218.121.180
+[Apr 25, 2022; 01:55 AM] 3444 of 3444 bytes sent from 52.40.110.104 to 127.0.0.1
+[Apr 25, 2022; 01:55 AM] 126 of 126 bytes sent from 127.0.0.1 to 52.40.110.104
+[Apr 25, 2022; 01:55 AM] 3506 of 3506 bytes sent from 34.218.121.180 to 127.0.0.1
+[Apr 25, 2022; 01:55 AM] 126 of 126 bytes sent from 127.0.0.1 to 34.218.121.180
+[Apr 25, 2022; 01:55 AM] [CONNECT Request] for firefox.settings.services.mozilla.com:443
+[Apr 25, 2022; 01:55 AM] 51 of 51 bytes sent from 52.40.110.104 to 127.0.0.1
+[Apr 25, 2022; 01:55 AM] 1272 of 1272 bytes sent from 127.0.0.1 to 52.40.110.104
+[Apr 25, 2022; 01:55 AM] [Connection established]
+[Apr 25, 2022; 01:55 AM] 517 of 517 bytes sent from 127.0.0.1 to 54.230.31.32
+[Apr 25, 2022; 01:55 AM] 3592 of 3592 bytes sent from 54.230.31.32 to 127.0.0.1
+[Apr 25, 2022; 01:55 AM] 428 of 428 bytes sent from 54.230.31.32 to 127.0.0.1
+[Apr 25, 2022; 01:55 AM] 51 of 51 bytes sent from 34.218.121.180 to 127.0.0.1
+[Apr 25, 2022; 01:55 AM] 641 of 641 bytes sent from 127.0.0.1 to 34.218.121.180
+[Apr 25, 2022; 01:55 AM] 64 of 64 bytes sent from 127.0.0.1 to 54.230.31.32
+[Apr 25, 2022; 01:55 AM] 473 of 473 bytes sent from 127.0.0.1 to 54.230.31.32
+[Apr 25, 2022; 01:55 AM] 1169 of 1169 bytes sent from 54.230.31.32 to 127.0.0.1
+[Apr 25, 2022; 01:55 AM] 266 of 266 bytes sent from 52.40.110.104 to 127.0.0.1
+[Apr 25, 2022; 01:55 AM] 31 of 31 bytes sent from 127.0.0.1 to 52.40.110.104
+[Apr 25, 2022; 01:55 AM] [Tunnel] 5707 bytes exchanged between 127.0.0.1 and 52.40.110.104
+[Apr 25, 2022; 01:55 AM] 158 of 158 bytes sent from 34.218.121.180 to 127.0.0.1
+[Apr 25, 2022; 01:55 AM] 146 of 146 bytes sent from 127.0.0.1 to 34.218.121.180
+[Apr 25, 2022; 01:55 AM] 144 of 144 bytes sent from 34.218.121.180 to 127.0.0.1
+[Apr 25, 2022; 01:55 AM] 35 of 35 bytes sent from 127.0.0.1 to 34.218.121.180
+[Apr 25, 2022; 01:55 AM] 46 of 46 bytes sent from 127.0.0.1 to 54.230.250.8
+[Apr 25, 2022; 01:55 AM] 31 of 31 bytes sent from 127.0.0.1 to 54.230.250.8
+[Apr 25, 2022; 01:55 AM] [Tunnel] 8424 bytes exchanged between 127.0.0.1 and 54.230.250.8
+[Apr 25, 2022; 01:55 AM] 24 of 24 bytes sent from 127.0.0.1 to 54.230.31.32
+[Apr 25, 2022; 01:55 AM] [Tunnel] 6267 bytes exchanged between 127.0.0.1 and 54.230.31.32
+[Apr 25, 2022; 01:55 AM] 31 of 31 bytes sent from 127.0.0.1 to 34.218.121.180
+[Apr 25, 2022; 01:55 AM] [Tunnel] 5355 bytes exchanged between 127.0.0.1 and 34.218.121.180
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [CONNECT Request] for content-signature-2.cdn.mozilla.net:443
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [Connection established]
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:56 AM] [CONNECT Request] for services.addons.mozilla.org:443
+[Apr 25, 2022; 01:56 AM] [Connection established]
+[Apr 25, 2022; 01:56 AM] [CONNECT Request] for push.services.mozilla.com:443
+[Apr 25, 2022; 01:56 AM] [Connection established]
+[Apr 25, 2022; 01:56 AM] 517 of 517 bytes sent from 127.0.0.1 to 34.209.200.8
+[Apr 25, 2022; 01:56 AM] [CONNECT Request] for firefox.settings.services.mozilla.com:443
+[Apr 25, 2022; 01:56 AM] [Connection established]
+[Apr 25, 2022; 01:56 AM] 3506 of 3506 bytes sent from 34.209.200.8 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 126 of 126 bytes sent from 127.0.0.1 to 34.209.200.8
+[Apr 25, 2022; 01:56 AM] 51 of 51 bytes sent from 34.209.200.8 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 641 of 641 bytes sent from 127.0.0.1 to 34.209.200.8
+[Apr 25, 2022; 01:56 AM] 158 of 158 bytes sent from 34.209.200.8 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 146 of 146 bytes sent from 127.0.0.1 to 34.209.200.8
+[Apr 25, 2022; 01:56 AM] 144 of 144 bytes sent from 34.209.200.8 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] [CONNECT Request] for www.google.com:443
+[Apr 25, 2022; 01:56 AM] [Connection established]
+[Apr 25, 2022; 01:56 AM] 517 of 517 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 4287 of 4287 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 64 of 64 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 527 of 527 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 608 of 608 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 31 of 31 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 31 of 31 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 781 of 781 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 4490 of 4490 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 1278 of 1278 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 898 of 898 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 8082 of 8082 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 2077 of 2077 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 383 of 383 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] [CONNECT Request] for fonts.gstatic.com:443
+[Apr 25, 2022; 01:56 AM] 105 of 105 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 385 of 385 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 4020 of 4020 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 39 of 39 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 106 of 106 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 722 of 722 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] [Connection established]
+[Apr 25, 2022; 01:56 AM] 517 of 517 bytes sent from 127.0.0.1 to 74.125.138.94
+[Apr 25, 2022; 01:56 AM] 4338 of 4338 bytes sent from 74.125.138.94 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 64 of 64 bytes sent from 127.0.0.1 to 74.125.138.94
+[Apr 25, 2022; 01:56 AM] 170 of 170 bytes sent from 127.0.0.1 to 74.125.138.94
+[Apr 25, 2022; 01:56 AM] 351 of 351 bytes sent from 127.0.0.1 to 74.125.138.94
+[Apr 25, 2022; 01:56 AM] 639 of 639 bytes sent from 74.125.138.94 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 7823 of 7823 bytes sent from 74.125.138.94 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 1796 of 1796 bytes sent from 74.125.138.94 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 6286 of 6286 bytes sent from 74.125.138.94 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 1796 of 1796 bytes sent from 74.125.138.94 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 31 of 31 bytes sent from 127.0.0.1 to 74.125.138.94
+[Apr 25, 2022; 01:56 AM] 5009 of 5009 bytes sent from 74.125.138.94 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 39 of 39 bytes sent from 127.0.0.1 to 74.125.138.94
+[Apr 25, 2022; 01:56 AM] 898 of 898 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 10240 of 10240 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 4303 of 4303 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 898 of 898 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 1796 of 1796 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 4490 of 4490 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 218 of 218 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 898 of 898 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 10240 of 10240 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 239 of 239 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 898 of 898 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 10240 of 10240 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 10240 of 10240 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 9866 of 9866 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 1545 of 1545 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 8082 of 8082 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 5388 of 5388 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 5564 of 5564 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 3592 of 3592 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 6286 of 6286 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 6286 of 6286 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 10240 of 10240 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 10240 of 10240 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 10240 of 10240 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 10240 of 10240 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 7522 of 7522 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 39 of 39 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 84 of 84 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 35 of 35 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 248 of 248 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 142 of 142 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 135 of 135 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 39 of 39 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 370 of 370 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 31 of 31 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 63 of 63 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 70 of 70 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 39 of 39 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 379 of 379 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 157 of 157 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 1302 of 1302 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 116 of 116 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 1340 of 1340 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 32 of 32 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 70 of 70 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 39 of 39 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 3111 of 3111 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 4490 of 4490 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 9878 of 9878 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 10240 of 10240 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 5924 of 5924 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 10240 of 10240 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 4128 of 4128 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 2639 of 2639 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 39 of 39 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] [CONNECT Request] for www.gstatic.com:443
+[Apr 25, 2022; 01:56 AM][Apr 25, 2022; 01:56 AM]  [CONNECT Request] for www.gstatic.com:443[CONNECT Request] for www.gstatic.com:443
+
+[Apr 25, 2022; 01:56 AM][Apr 25, 2022; 01:56 AM]  [Connection established][Connection established]
+
+[Apr 25, 2022; 01:56 AM] [Connection established]
+[Apr 25, 2022; 01:56 AM] [CONNECT Request] for www.gstatic.com:443
+[Apr 25, 2022; 01:56 AM] 517 of 517 bytes sent from 127.0.0.1 to 74.125.21.94
+[Apr 25, 2022; 01:56 AM] [Tunnel] Total 0 bytes exchanged between 127.0.0.1 and 74.125.21.94
+[Apr 25, 2022; 01:56 AM] [Connection established]
+[Apr 25, 2022; 01:56 AM] 107 of 107 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 9057 of 9057 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 102 of 102 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 39 of 39 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] [CONNECT Request] for www.gstatic.com:443
+[Apr 25, 2022; 01:56 AM] [CONNECT Request] for www.gstatic.com:443
+[Apr 25, 2022; 01:56 AM] [Connection established]
+[Apr 25, 2022; 01:56 AM] [Connection established]
+[Apr 25, 2022; 01:56 AM] 1638 of 1638 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 31 of 31 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 133 of 133 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 39 of 39 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 1583 of 1583 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 35 of 35 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 200 of 200 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 133 of 133 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 39 of 39 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] [CONNECT Request] for apis.google.com:443
+[Apr 25, 2022; 01:56 AM] [Connection established]
+[Apr 25, 2022; 01:56 AM] 227 of 227 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 35 of 35 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 1699 of 1699 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 35 of 35 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 133 of 133 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] [CONNECT Request] for adservice.google.com:443
+[Apr 25, 2022; 01:56 AM] 151 of 151 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 79 of 79 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] [Connection established]
+[Apr 25, 2022; 01:56 AM][Apr 25, 2022; 01:56 AM]  86 of 86 bytes sent from 108.177.122.103 to 127.0.0.1517 of 517 bytes sent from 127.0.0.1 to 64.233.185.155
+
+[Apr 25, 2022; 01:56 AM] 5807 of 5807 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 401 of 401 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 4490 of 4490 bytes sent from 64.233.185.155 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 2181 of 2181 bytes sent from 64.233.185.155 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 64 of 64 bytes sent from 127.0.0.1 to 64.233.185.155
+[Apr 25, 2022; 01:56 AM] 170 of 170 bytes sent from 127.0.0.1 to 64.233.185.155
+[Apr 25, 2022; 01:56 AM] 496 of 496 bytes sent from 127.0.0.1 to 64.233.185.155
+[Apr 25, 2022; 01:56 AM] 39 of 39 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 608 of 608 bytes sent from 64.233.185.155 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 31 of 31 bytes sent from 127.0.0.1 to 64.233.185.155
+[Apr 25, 2022; 01:56 AM] 603 of 603 bytes sent from 64.233.185.155 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 39 of 39 bytes sent from 127.0.0.1 to 64.233.185.155
+[Apr 25, 2022; 01:56 AM] [CONNECT Request] for ssl.gstatic.com:443
+[Apr 25, 2022; 01:56 AM] 254 of 254 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 350 of 350 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 6100 of 6100 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 39 of 39 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] [Connection established]
+[Apr 25, 2022; 01:56 AM] [CONNECT Request] for ssl.gstatic.com:443
+[Apr 25, 2022; 01:56 AM] [CONNECT Request] for ssl.gstatic.com:443
+[Apr 25, 2022; 01:56 AM] [Connection established]
+[Apr 25, 2022; 01:56 AM] [Connection established]
+[Apr 25, 2022; 01:56 AM] [CONNECT Request] for googleads.g.doubleclick.net:443
+[Apr 25, 2022; 01:56 AM] [CONNECT Request] for ssl.gstatic.com:443
+[Apr 25, 2022; 01:56 AM] [Connection established]
+[Apr 25, 2022; 01:56 AM] [Connection established]
+[Apr 25, 2022; 01:56 AM] 517 of 517 bytes sent from 127.0.0.1 to 142.251.15.94
+[Apr 25, 2022; 01:56 AM] [Tunnel] Total 517 bytes exchanged between 127.0.0.1 and 142.251.15.94
+[Apr 25, 2022; 01:56 AM] 517 of 517 bytes sent from 127.0.0.1 to 74.125.21.154
+[Apr 25, 2022; 01:56 AM] 4533 of 4533 bytes sent from 74.125.21.154 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] [CONNECT Request] for ssl.gstatic.com:443
+[Apr 25, 2022; 01:56 AM] [Connection established]
+[Apr 25, 2022; 01:56 AM] 572 of 572 bytes sent from 127.0.0.1 to 74.125.21.154
+[Apr 25, 2022; 01:56 AM] 517 of 517 bytes sent from 127.0.0.1 to 142.251.15.94
+[Apr 25, 2022; 01:56 AM] [CONNECT Request] for ssl.gstatic.com:443
+[Apr 25, 2022; 01:56 AM] 298 of 298 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 35 of 35 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 4338 of 4338 bytes sent from 142.251.15.94 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] [Connection established]
+[Apr 25, 2022; 01:56 AM] 517 of 517 bytes sent from 127.0.0.1 to 142.251.15.94
+[Apr 25, 2022; 01:56 AM] 4338 of 4338 bytes sent from 142.251.15.94 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 520 of 520 bytes sent from 127.0.0.1 to 142.251.15.94
+[Apr 25, 2022; 01:56 AM] 608 of 608 bytes sent from 142.251.15.94 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 1475 of 1475 bytes sent from 142.251.15.94 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 525 of 525 bytes sent from 127.0.0.1 to 142.251.15.94
+[Apr 25, 2022; 01:56 AM] 31 of 31 bytes sent from 127.0.0.1 to 142.251.15.94
+[Apr 25, 2022; 01:56 AM] 369 of 369 bytes sent from 142.251.15.94 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 39 of 39 bytes sent from 127.0.0.1 to 142.251.15.94
+[Apr 25, 2022; 01:56 AM] 2906 of 2906 bytes sent from 142.251.15.94 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 608 of 608 bytes sent from 74.125.21.154 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 94 of 94 bytes sent from 127.0.0.1 to 142.251.15.94
+[Apr 25, 2022; 01:56 AM] [Tunnel] Total 8380 bytes exchanged between 127.0.0.1 and 142.251.15.94
+[Apr 25, 2022; 01:56 AM] 31 of 31 bytes sent from 127.0.0.1 to 74.125.21.154
+[Apr 25, 2022; 01:56 AM] 600 of 600 bytes sent from 74.125.21.154 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 39 of 39 bytes sent from 127.0.0.1 to 74.125.21.154
+[Apr 25, 2022; 01:56 AM] 432 of 432 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 108 of 108 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 5388 of 5388 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 10240 of 10240 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 1986 of 1986 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 39 of 39 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 267 of 267 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 107 of 107 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 722 of 722 bytes sent from 108.177.122.103 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 39 of 39 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 285 of 285 bytes sent from 127.0.0.1 to 64.233.185.155
+[Apr 25, 2022; 01:56 AM] 364 of 364 bytes sent from 64.233.185.155 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 39 of 39 bytes sent from 127.0.0.1 to 64.233.185.155
+[Apr 25, 2022; 01:56 AM] 129 of 129 bytes sent from 127.0.0.1 to 74.125.21.154
+[Apr 25, 2022; 01:56 AM] 152 of 152 bytes sent from 74.125.21.154 to 127.0.0.1
+[Apr 25, 2022; 01:56 AM] 39 of 39 bytes sent from 127.0.0.1 to 74.125.21.154
+[Apr 25, 2022; 01:56 AM] 35 of 35 bytes sent from 127.0.0.1 to 34.209.200.8
+[Apr 25, 2022; 01:56 AM][Apr 25, 2022; 01:56 AM]  39 of 39 bytes sent from 127.0.0.1 to 74.125.138.94
+39 of 39 bytes sent from 127.0.0.1 to 142.251.15.94
+[Apr 25, 2022; 01:56 AM] 24 of 24 bytes sent from 127.0.0.1 to 74.125.138.94
+[Apr 25, 2022; 01:56 AM] 1000 of 1000 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] 63 of 63 bytes sent from 127.0.0.1 to 74.125.21.154
+[Apr 25, 2022; 01:56 AM] 63 of 63 bytes sent from 127.0.0.1 to 64.233.185.155
+[Apr 25, 2022; 01:56 AM] 31 of 31 bytes sent from 127.0.0.1 to 34.209.200.8
+[Apr 25, 2022; 01:56 AM] [Tunnel] Total 28922 bytes exchanged between 127.0.0.1 and 74.125.138.94
+[Apr 25, 2022; 01:56 AM] 63 of 63 bytes sent from 127.0.0.1 to 108.177.122.103
+[Apr 25, 2022; 01:56 AM] [Tunnel] Total 284834 bytes exchanged between 127.0.0.1 and 108.177.122.103
+[Apr 25, 2022; 01:56 AM] [Tunnel] Total 7283 bytes exchanged between 127.0.0.1 and 74.125.21.154
+[Apr 25, 2022; 01:56 AM] [Tunnel] Total 5355 bytes exchanged between 127.0.0.1 and 34.209.200.8
+[Apr 25, 2022; 01:56 AM] [Tunnel] Total 9950 bytes exchanged between 127.0.0.1 and 64.233.185.155
+[Apr 25, 2022; 01:56 AM] 24 of 24 bytes sent from 127.0.0.1 to 142.251.15.94
+[Apr 25, 2022; 01:56 AM] [Tunnel] Total 7960 bytes exchanged between 127.0.0.1 and 142.251.15.94
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [CONNECT Request] for content-signature-2.cdn.mozilla.net:443
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [Connection established]
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 01:58 AM] [CONNECT Request] for services.addons.mozilla.org:443
+[Apr 25, 2022; 01:58 AM] [CONNECT Request] for services.addons.mozilla.org:443
+[Apr 25, 2022; 01:58 AM] [Connection established]
+[Apr 25, 2022; 01:58 AM] 208 of 208 bytes sent from 127.0.0.1 to 54.230.250.84
+[Apr 25, 2022; 01:58 AM] [Connection established]
+[Apr 25, 2022; 01:58 AM] 208 of 208 bytes sent from 127.0.0.1 to 54.230.250.84
+[Apr 25, 2022; 01:58 AM] 3592 of 3592 bytes sent from 54.230.250.84 to 127.0.0.1
+[Apr 25, 2022; 01:58 AM] 583 of 583 bytes sent from 54.230.250.84 to 127.0.0.1
+[Apr 25, 2022; 01:58 AM] 2694 of 2694 bytes sent from 54.230.250.84 to 127.0.0.1
+[Apr 25, 2022; 01:58 AM] 898 of 898 bytes sent from 54.230.250.84 to 127.0.0.1
+[Apr 25, 2022; 01:58 AM] 583 of 583 bytes sent from 54.230.250.84 to 127.0.0.1
+[Apr 25, 2022; 01:58 AM] 93 of 93 bytes sent from 127.0.0.1 to 54.230.250.84
+[Apr 25, 2022; 01:58 AM] 93 of 93 bytes sent from 127.0.0.1 to 54.230.250.84
+[Apr 25, 2022; 01:58 AM] 240 of 240 bytes sent from 54.230.250.84 to 127.0.0.1
+[Apr 25, 2022; 01:58 AM] 177 of 177 bytes sent from 127.0.0.1 to 54.230.250.84
+[Apr 25, 2022; 01:58 AM] 775 of 775 bytes sent from 127.0.0.1 to 54.230.250.84
+[Apr 25, 2022; 01:58 AM] 38 of 38 bytes sent from 54.230.250.84 to 127.0.0.1
+[Apr 25, 2022; 01:58 AM] 240 of 240 bytes sent from 54.230.250.84 to 127.0.0.1
+[Apr 25, 2022; 01:58 AM] 952 of 952 bytes sent from 127.0.0.1 to 54.230.250.84
+[Apr 25, 2022; 01:58 AM] 38 of 38 bytes sent from 54.230.250.84 to 127.0.0.1
+[Apr 25, 2022; 01:58 AM] [CONNECT Request] for push.services.mozilla.com:443
+[Apr 25, 2022; 01:58 AM] 2643 of 2643 bytes sent from 54.230.250.84 to 127.0.0.1
+[Apr 25, 2022; 01:58 AM] 2600 of 2600 bytes sent from 54.230.250.84 to 127.0.0.1
+[Apr 25, 2022; 01:58 AM] 38 of 38 bytes sent from 54.230.250.84 to 127.0.0.1
+[Apr 25, 2022; 01:58 AM] 77 of 77 bytes sent from 127.0.0.1 to 54.230.250.84
+[Apr 25, 2022; 01:58 AM] [Connection established]
+[Apr 25, 2022; 01:58 AM] 517 of 517 bytes sent from 127.0.0.1 to 52.40.152.118
+[Apr 25, 2022; 01:58 AM] [StreamClosed] while parsing request
+[Apr 25, 2022; 01:58 AM] 3506 of 3506 bytes sent from 52.40.152.118 to 127.0.0.1
+[Apr 25, 2022; 01:58 AM] 126 of 126 bytes sent from 127.0.0.1 to 52.40.152.118
+[Apr 25, 2022; 01:58 AM] 51 of 51 bytes sent from 52.40.152.118 to 127.0.0.1
+[Apr 25, 2022; 01:58 AM] 641 of 641 bytes sent from 127.0.0.1 to 52.40.152.118
+[Apr 25, 2022; 01:58 AM] 158 of 158 bytes sent from 52.40.152.118 to 127.0.0.1
+[Apr 25, 2022; 01:58 AM] 146 of 146 bytes sent from 127.0.0.1 to 52.40.152.118
+[Apr 25, 2022; 01:58 AM] 144 of 144 bytes sent from 52.40.152.118 to 127.0.0.1
+[Apr 25, 2022; 01:58 AM] 35 of 35 bytes sent from 127.0.0.1 to 52.40.152.118
+[Apr 25, 2022; 01:58 AM] 46 of 46 bytes sent from 127.0.0.1 to 54.230.250.84
+[Apr 25, 2022; 01:58 AM] 31 of 31 bytes sent from 127.0.0.1 to 54.230.250.84
+[Apr 25, 2022; 01:58 AM] 31 of 31 bytes sent from 127.0.0.1 to 52.40.152.118
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [CONNECT Request] for content-signature-2.cdn.mozilla.net:443
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [Connection established]
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:00 AM] [CONNECT Request] for services.addons.mozilla.org:443
+[Apr 25, 2022; 02:00 AM] [CONNECT Request] for services.addons.mozilla.org:443
+[Apr 25, 2022; 02:00 AM][Apr 25, 2022; 02:00 AM]  [Connection established][Connection established]
+
+[Apr 25, 2022; 02:00 AM] [CONNECT Request] for push.services.mozilla.com:443
+[Apr 25, 2022; 02:00 AM] [Connection established]
+[Apr 25, 2022; 02:00 AM] 517 of 517 bytes sent from 127.0.0.1 to 54.188.38.127
+[Apr 25, 2022; 02:00 AM] [CONNECT Request] for firefox.settings.services.mozilla.com:443
+[Apr 25, 2022; 02:00 AM] [Connection established]
+[Apr 25, 2022; 02:00 AM] 3506 of 3506 bytes sent from 54.188.38.127 to 127.0.0.1
+[Apr 25, 2022; 02:00 AM] 126 of 126 bytes sent from 127.0.0.1 to 54.188.38.127
+[Apr 25, 2022; 02:00 AM] 51 of 51 bytes sent from 54.188.38.127 to 127.0.0.1
+[Apr 25, 2022; 02:00 AM] 641 of 641 bytes sent from 127.0.0.1 to 54.188.38.127
+[Apr 25, 2022; 02:00 AM] 158 of 158 bytes sent from 54.188.38.127 to 127.0.0.1
+[Apr 25, 2022; 02:00 AM] 146 of 146 bytes sent from 127.0.0.1 to 54.188.38.127
+[Apr 25, 2022; 02:00 AM] 144 of 144 bytes sent from 54.188.38.127 to 127.0.0.1
+[Apr 25, 2022; 02:01 AM] 35 of 35 bytes sent from 127.0.0.1 to 54.188.38.127
+[Apr 25, 2022; 02:01 AM] 31 of 31 bytes sent from 127.0.0.1 to 54.188.38.127
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [CONNECT Request] for content-signature-2.cdn.mozilla.net:443
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [GET Request] for http://detectportal.firefox.com/canonical.html
+[Apr 25, 2022; 02:03 AM] [CONNECT Request] for services.addons.mozilla.org:443
+[Apr 25, 2022; 02:03 AM] [CONNECT Request] for services.addons.mozilla.org:443
+[Apr 25, 2022; 02:03 AM] [Connection established]
+[Apr 25, 2022; 02:03 AM] 208 of 208 bytes sent from 127.0.0.1 to 54.230.250.8
+[Apr 25, 2022; 02:03 AM] [Connection established]
+[Apr 25, 2022; 02:03 AM] 208 of 208 bytes sent from 127.0.0.1 to 54.230.250.8
+[Apr 25, 2022; 02:03 AM] 3592 of 3592 bytes sent from 54.230.250.8 to 127.0.0.1
+[Apr 25, 2022; 02:03 AM] 583 of 583 bytes sent from 54.230.250.8 to 127.0.0.1
+[Apr 25, 2022; 02:03 AM] [CONNECT Request] for push.services.mozilla.com:443
+[Apr 25, 2022; 02:03 AM] 4175 of 4175 bytes sent from 54.230.250.8 to 127.0.0.1
+[Apr 25, 2022; 02:03 AM] 93 of 93 bytes sent from 127.0.0.1 to 54.230.250.8
+[Apr 25, 2022; 02:03 AM] 93 of 93 bytes sent from 127.0.0.1 to 54.230.250.8
+[Apr 25, 2022; 02:03 AM] 240 of 240 bytes sent from 54.230.250.8 to 127.0.0.1
+[Apr 25, 2022; 02:03 AM] 240 of 240 bytes sent from 54.230.250.8 to 127.0.0.1
+[Apr 25, 2022; 02:03 AM] 952 of 952 bytes sent from 127.0.0.1 to 54.230.250.8
+[Apr 25, 2022; 02:03 AM] 38 of 38 bytes sent from 54.230.250.8 to 127.0.0.1
+[Apr 25, 2022; 02:03 AM] 952 of 952 bytes sent from 127.0.0.1 to 54.230.250.8
+[Apr 25, 2022; 02:03 AM] 38 of 38 bytes sent from 54.230.250.8 to 127.0.0.1
+[Apr 25, 2022; 02:03 AM] [CONNECT Request] for firefox.settings.services.mozilla.com:443
+[Apr 25, 2022; 02:03 AM] [Connection established]
+[Apr 25, 2022; 02:03 AM] 517 of 517 bytes sent from 127.0.0.1 to 35.82.230.35
+[Apr 25, 2022; 02:03 AM] 2637 of 2637 bytes sent from 54.230.250.8 to 127.0.0.1
+[Apr 25, 2022; 02:03 AM] 46 of 46 bytes sent from 127.0.0.1 to 54.230.250.8
+[Apr 25, 2022; 02:03 AM] [Apr 25, 2022; 02:03 AM]31 of 31 bytes sent from 127.0.0.1 to 54.230.250.8 
+2603 of 2603 bytes sent from 54.230.250.8 to 127.0.0.1
+[Apr 25, 2022; 02:03 AM] [Tunnel] Total 8420 bytes exchanged between 127.0.0.1 and 54.230.250.8
+[Apr 25, 2022; 02:03 AM] 38 of 38 bytes sent from 54.230.250.8 to 127.0.0.1
+[Apr 25, 2022; 02:03 AM] 3506 of 3506 bytes sent from 35.82.230.35 to 127.0.0.1
+[Apr 25, 2022; 02:03 AM] 126 of 126 bytes sent from 127.0.0.1 to 35.82.230.35
+[Apr 25, 2022; 02:03 AM] 51 of 51 bytes sent from 35.82.230.35 to 127.0.0.1
+[Apr 25, 2022; 02:03 AM] 641 of 641 bytes sent from 127.0.0.1 to 35.82.230.35
+[Apr 25, 2022; 02:03 AM] 158 of 158 bytes sent from 35.82.230.35 to 127.0.0.1
+[Apr 25, 2022; 02:03 AM] 146 of 146 bytes sent from 127.0.0.1 to 35.82.230.35
+[Apr 25, 2022; 02:03 AM] 144 of 144 bytes sent from 35.82.230.35 to 127.0.0.1
+[Apr 25, 2022; 02:03 AM] 35 of 35 bytes sent from 127.0.0.1 to 35.82.230.35
+[Apr 25, 2022; 02:03 AM] 46 of 46 bytes sent from 127.0.0.1 to 54.230.250.8
+[Apr 25, 2022; 02:03 AM] 31 of 31 bytes sent from 127.0.0.1 to 54.230.250.8
+[Apr 25, 2022; 02:03 AM] [Tunnel] Total 8424 bytes exchanged between 127.0.0.1 and 54.230.250.8
+[Apr 25, 2022; 02:03 AM] 31 of 31 bytes sent from 127.0.0.1 to 35.82.230.35
+[Apr 25, 2022; 02:03 AM] [Tunnel] Total 5355 bytes exchanged between 127.0.0.1 and 35.82.230.35
