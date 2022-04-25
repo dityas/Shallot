@@ -84,14 +84,14 @@ pub fn event_log(event: Event, msg: &str) -> Result<(), Error> {
     let mut event_msg = String::new();
 
     match event {
-        Event::BlackListDeny => event_msg += "Blacklist Deny",
-        Event::WhiteListDeny => event_msg += "Whitelist Deny",
-        Event::Connection => event_msg += "Connection",
-        Event::DataTransfer => event_msg += "Data Transfer",
-        Event::ProxyServer => event_msg += "Proxy Server",
-        Event::SuspiciousActivity => event_msg += "Suspicious Activity",
-        Event::Uncategorized => event_msg += "Uncategorized",
-        _ => event_msg += "Uncategorized",
+        Event::BlackListDeny => event_msg += "[Blacklist Deny]",
+        Event::WhiteListDeny => event_msg += "[Whitelist Deny]",
+        Event::Connection => event_msg += "[Connection]",
+        Event::DataTransfer => event_msg += "[Data Transfer]",
+        Event::ProxyServer => event_msg += "[Proxy Server]",
+        Event::SuspiciousActivity => event_msg += "[Suspicious Activity]",
+        Event::Uncategorized => event_msg += "[Uncategorized]",
+        _ => event_msg += "[Uncategorized]",
     };
 
     writeln!(
@@ -104,8 +104,9 @@ pub fn event_log(event: Event, msg: &str) -> Result<(), Error> {
 
     // For console logging
     println!(
-        "{} {}",
+        "{} {}: {}",
         time.format("[%b %d, %Y; %I:%M %p]").to_string(),
+        event_msg,
         msg
     );
 

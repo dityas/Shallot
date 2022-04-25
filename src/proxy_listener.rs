@@ -5,6 +5,7 @@ use std::thread;
 
 use crate::firewall::Firewall;
 use crate::logging;
+use crate::logging::Event;
 use crate::request_handler::process_connection;
 
 // Req Handling error type
@@ -31,40 +32,27 @@ pub fn get_target_stream(addr: &str) -> Result<TcpStream> {
 // Create a simple TcpListener for given ip and port
 fn get_listener(ip: &String, port: &String) -> TcpListener {
     // Will remove all debugging lines after testing
-    println!("Starting proxy listener on {}:{}", ip, port);
+    logging::event_log(
+        Event::ProxyServer,
+        &format!("Starting proxy listener on {}:{}", ip, port),
+    );
 
     let listener = TcpListener::bind(format!("{}:{}", ip, port));
     let listener_handler = match listener {
         Ok(sock) => sock,
         Err(err) => {
-            eprintln!("Could not open listener on {}:{}", ip, port);
-            eprintln!("Encountered error {}", err);
+            logging::event_log(Event::ProxyServer, &format!("Encountered error {}", err));
             panic!("Could not start server!");
         }
     };
 
-    println!("Listener started");
+    logging::event_log(Event::ProxyServer, "Listener started");
 
     listener_handler
 }
 
 fn whitelist_check(addr: &SocketAddr, fwall: &mut Firewall) -> bool {
-    match fwall.in_whitelist(addr.ip().to_string().as_str()) {
-        true => {
-            logging::event_log(
-                format!("[Connection event] Got request from {:?}", addr.ip()).as_str(),
-            );
-            true
-        }
-
-        false => {
-            logging::event_log(
-                format!("[Firewall event] {} not in whitelist!", addr.ip()).as_str(),
-            );
-
-            false
-        }
-    }
+    fwall.in_whitelist(addr.ip().to_string().as_str())
 }
 
 pub fn run_listener() {
@@ -81,7 +69,7 @@ pub fn run_listener() {
                     match process_connection(&mut stream) {
                         Ok(_) => {}
                         Err(e) => {
-                            eprintln!("Got error: {:?}", e);
+                            logging::event_log(Event::Connection, &format!("Got error: {:?}", e));
                         }
                     };
                 });
@@ -89,7 +77,8 @@ pub fn run_listener() {
 
             Err(e) => {
                 logging::event_log(
-                    format!("[Connection event] Could not accept connection {:?}", e).as_str(),
+                    Event::Connection,
+                    &format!("Could not accept connection {:?}", e),
                 );
             }
         }

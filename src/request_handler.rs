@@ -9,6 +9,7 @@ use std::net::TcpStream;
 use httparse::{Request, EMPTY_HEADER};
 
 use crate::logging;
+use crate::logging::Event;
 use crate::proxy_listener::get_target_stream;
 use crate::proxy_listener::ProxyError;
 use crate::proxy_listener::Result;
@@ -119,7 +120,8 @@ fn tunnel_through(
             }
             Ok(n) => {
                 logging::event_log(
-                    format!(
+                    Event::DataTransfer,
+                    &format!(
                         "{} of {} bytes sent from {} to {}",
                         n,
                         tunnel_buf.0,
@@ -129,8 +131,7 @@ fn tunnel_through(
                         dst.peer_addr()
                             .map_err(|_| ProxyError::Other("".to_owned()))?
                             .ip()
-                    )
-                    .as_str(),
+                    ),
                 );
 
                 result = Ok(n);
@@ -187,9 +188,17 @@ fn tunnel(s_stream: &mut TcpStream, t_stream: &mut TcpStream) -> usize {
 pub fn process_connection(stream: &mut TcpStream) -> Result<()> {
     let req_type = get_req_type(stream);
 
+    let src_addr = stream
+        .peer_addr()
+        .map_err(|e| ProxyError::Other(format!("{:?}", e)))?
+        .ip();
+
     match req_type {
         Ok(ReqType::CONNECT(p)) => {
-            logging::event_log(&format!("[CONNECT Request] for {}", p));
+            logging::event_log(
+                Event::Connection,
+                &format!("CONNECT request for {} from {}", p, src_addr),
+            );
 
             let mut t_stream = get_target_stream(&p)?;
 
@@ -200,29 +209,39 @@ pub fn process_connection(stream: &mut TcpStream) -> Result<()> {
                 .map_err(|e| ProxyError::Other(format!("{:?}", e)))?
                 .ip();
 
-            let src_addr = stream
-                .peer_addr()
-                .map_err(|e| ProxyError::Other(format!("{:?}", e)))?
-                .ip();
-
-            logging::event_log(&format!("[Connection established]"));
+            logging::event_log(
+                Event::Connection,
+                &format!(
+                    "CONNECT tunnel established between {} and {}",
+                    src_addr, dst_addr
+                ),
+            );
 
             let n = tunnel(stream, &mut t_stream);
-            logging::event_log(&format!(
-                "[Tunnel] Total {} bytes exchanged between {} and {}",
-                n, src_addr, dst_addr
-            ));
+            logging::event_log(
+                Event::DataTransfer,
+                &format!(
+                    "Total {} bytes exchanged between {} and {}",
+                    n, src_addr, dst_addr
+                ),
+            );
 
             Ok(())
         }
 
         Ok(ReqType::GET(p)) => {
-            logging::event_log(&format!("[GET Request] for {}", p));
+            logging::event_log(
+                Event::Connection,
+                &format!("GET for {} from {}", p, src_addr),
+            );
             Ok(())
         }
 
         Err(e) => {
-            logging::event_log(&format!("[{:?}] while parsing request", e));
+            logging::event_log(
+                Event::Connection,
+                &format!("[{:?}] while parsing request", e),
+            );
             Err(e)
         }
     }
