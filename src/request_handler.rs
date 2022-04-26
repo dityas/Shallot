@@ -11,6 +11,8 @@ use std::net::TcpStream;
 
 use httparse::{Request, EMPTY_HEADER};
 
+use std::str;
+
 use crate::firewall::Firewall;
 use crate::logging;
 use crate::logging::Event;
@@ -93,6 +95,15 @@ fn read_from_tcpstream(stream: &mut TcpStream, buf: &mut [u8]) -> Result<usize> 
 
 /// Forward data back and forth between source and target using the TunnelBuffer struct
 struct TunnelBuffer(usize, [u8; 10240]);
+
+fn convert_tunnel_buffer(buf: TunnelBuffer) -> Result<String> {
+    match str::from_utf8(&buf.1[0..buf.0]) {
+        Ok(res) => Ok(res.to_owned()),
+        _ => Err(ProxyError::Parse(
+            "Could not parse UTF-8 string.".to_owned(),
+        )),
+    }
+}
 
 fn tunnel_through(
     tunnel_buf: &mut TunnelBuffer,
