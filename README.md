@@ -27,7 +27,7 @@ The server will return the information from facebook.com where the curl request 
 * **HTTPParse:** A library for parsing HTTP requests.
 * **Memcached:** A library for working with memcached, a memory-based approach to caching.
 
-The following crates have been removed since our previous deliverables for causing software conflicts.
+The following crates have been removed causing software conflicts.
 
 * ~~**Hyper:** An HTTP library.~~ It did not allow enough control of the process.
 * ~~**Tokio:** An asynchronous runtime.~~ It was causing our software to hang, so we found another solution.
