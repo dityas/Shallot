@@ -65,14 +65,23 @@ pub fn run_listener() {
     for mut stream in listener.incoming() {
         match stream {
             Ok(mut stream) => {
-                thread::spawn(move || {
-                    match process_connection(&mut stream) {
-                        Ok(_) => {}
-                        Err(e) => {
-                            logging::event_log(Event::Connection, &format!("Got error: {:?}", e));
-                        }
-                    };
-                });
+                let ip = stream.peer_addr().unwrap();
+
+                if !whitelist_check(&ip, &mut firewall) {
+                    logging::event_log(Event::WhiteListDeny, &format!("{} not in whitelist", ip));
+                } else {
+                    thread::spawn(move || {
+                        match process_connection(&mut stream) {
+                            Ok(_) => {}
+                            Err(e) => {
+                                logging::event_log(
+                                    Event::Connection,
+                                    &format!("Got error: {:?}", e),
+                                );
+                            }
+                        };
+                    });
+                }
             }
 
             Err(e) => {

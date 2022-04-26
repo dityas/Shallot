@@ -2384,3 +2384,148 @@ Total 9242 bytes exchanged between 127.0.0.1 and 34.98.105.146
 [Apr 25, 2022; 03:44 AM] [Data Transfer]: Total 7711 bytes exchanged between 127.0.0.1 and 34.98.91.45
 63 of 63 bytes sent from 127.0.0.1 to 35.190.93.146
 [Apr 25, 2022; 03:44 AM] [Data Transfer]: Total 6804 bytes exchanged between 127.0.0.1 and 35.190.93.146
+[Apr 26, 2022; 05:27 PM] [Proxy Server]: Starting proxy listener on 127.0.0.1:7878
+[Apr 26, 2022; 05:27 PM] [Proxy Server]: Listener started
+[Apr 26, 2022; 05:27 PM] [Connection]: CONNECT request for google.com:443 from 127.0.0.1
+[Apr 26, 2022; 05:27 PM] [Connection]: CONNECT tunnel established between 127.0.0.1 and 74.125.136.100
+[Apr 26, 2022; 05:27 PM] [Data Transfer]: 517 of 517 bytes sent from 127.0.0.1 to 74.125.136.100
+[Apr 26, 2022; 05:27 PM] [Data Transfer]: 1374 of 1374 bytes sent from 74.125.136.100 to 127.0.0.1
+[Apr 26, 2022; 05:27 PM] [Data Transfer]: 1374 of 1374 bytes sent from 74.125.136.100 to 127.0.0.1
+[Apr 26, 2022; 05:27 PM] [Data Transfer]: 2748 of 2748 bytes sent from 74.125.136.100 to 127.0.0.1
+[Apr 26, 2022; 05:27 PM] [Data Transfer]: 1195 of 1195 bytes sent from 74.125.136.100 to 127.0.0.1
+[Apr 26, 2022; 05:27 PM] [Data Transfer]: 80 of 80 bytes sent from 127.0.0.1 to 74.125.136.100
+[Apr 26, 2022; 05:27 PM] [Data Transfer]: 96 of 96 bytes sent from 127.0.0.1 to 74.125.136.100
+[Apr 26, 2022; 05:27 PM] [Data Transfer]: 1317 of 1317 bytes sent from 74.125.136.100 to 127.0.0.1
+[Apr 26, 2022; 05:27 PM] [Data Transfer]: 24 of 24 bytes sent from 127.0.0.1 to 74.125.136.100
+[Apr 26, 2022; 05:27 PM] [Data Transfer]: Total 8725 bytes exchanged between 127.0.0.1 and 74.125.136.100
+[Apr 26, 2022; 05:28 PM] [Connection]: CONNECT request for google.com:443 from 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Connection]: CONNECT tunnel established between 127.0.0.1 and 74.125.136.138
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 517 of 517 bytes sent from 127.0.0.1 to 74.125.136.138
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 74.125.136.138 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 2748 of 2748 bytes sent from 74.125.136.138 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 74.125.136.138 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1197 of 1197 bytes sent from 74.125.136.138 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 80 of 80 bytes sent from 127.0.0.1 to 74.125.136.138
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 96 of 96 bytes sent from 127.0.0.1 to 74.125.136.138
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1317 of 1317 bytes sent from 74.125.136.138 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 24 of 24 bytes sent from 127.0.0.1 to 74.125.136.138
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: Total 8727 bytes exchanged between 127.0.0.1 and 74.125.136.138
+[Apr 26, 2022; 05:28 PM] [Connection]: CONNECT request for fb.com:443 from 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Connection]: CONNECT tunnel established between 127.0.0.1 and 31.13.65.36
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 517 of 517 bytes sent from 127.0.0.1 to 31.13.65.36
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 723 of 723 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 64 of 64 bytes sent from 127.0.0.1 to 31.13.65.36
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 92 of 92 bytes sent from 127.0.0.1 to 31.13.65.36
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 171 of 171 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 433 of 433 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 24 of 24 bytes sent from 127.0.0.1 to 31.13.65.36
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: Total 4772 bytes exchanged between 127.0.0.1 and 31.13.65.36
+[Apr 26, 2022; 05:28 PM] [Connection]: CONNECT request for fb.com:443 from 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Connection]: CONNECT tunnel established between 127.0.0.1 and 31.13.65.36
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 517 of 517 bytes sent from 127.0.0.1 to 31.13.65.36
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 723 of 723 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 64 of 64 bytes sent from 127.0.0.1 to 31.13.65.36
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 92 of 92 bytes sent from 127.0.0.1 to 31.13.65.36
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 171 of 171 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 433 of 433 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 24 of 24 bytes sent from 127.0.0.1 to 31.13.65.36
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: Total 4772 bytes exchanged between 127.0.0.1 and 31.13.65.36
+[Apr 26, 2022; 05:28 PM] [Connection]: CONNECT request for facebook.com:443 from 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Connection]: CONNECT tunnel established between 127.0.0.1 and 31.13.65.36
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 517 of 517 bytes sent from 127.0.0.1 to 31.13.65.36
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 495 of 495 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 64 of 64 bytes sent from 127.0.0.1 to 31.13.65.36
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 98 of 98 bytes sent from 127.0.0.1 to 31.13.65.36
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 177 of 177 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 646 of 646 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 24 of 24 bytes sent from 127.0.0.1 to 31.13.65.36
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: Total 4769 bytes exchanged between 127.0.0.1 and 31.13.65.36
+[Apr 26, 2022; 05:28 PM] [Connection]: CONNECT request for www.facebook.com:443 from 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Connection]: CONNECT tunnel established between 127.0.0.1 and 31.13.65.36
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 517 of 517 bytes sent from 127.0.0.1 to 31.13.65.36
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 495 of 495 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 64 of 64 bytes sent from 127.0.0.1 to 31.13.65.36
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 102 of 102 bytes sent from 127.0.0.1 to 31.13.65.36
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 177 of 177 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 2748 of 2748 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 10240 of 10240 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 752 of 752 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 4122 of 4122 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 10240 of 10240 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 3500 of 3500 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 10240 of 10240 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 752 of 752 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 2748 of 2748 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 4122 of 4122 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 1188 of 1188 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: 24 of 24 bytes sent from 127.0.0.1 to 31.13.65.36
+[Apr 26, 2022; 05:28 PM] [Data Transfer]: Total 89129 bytes exchanged between 127.0.0.1 and 31.13.65.36
+[Apr 26, 2022; 05:43 PM] [Proxy Server]: Starting proxy listener on 127.0.0.1:7878
+[Apr 26, 2022; 05:43 PM] [Proxy Server]: Listener started
+[Apr 26, 2022; 05:43 PM] [Connection]: CONNECT request for www.facebook.com:443 from 127.0.0.1
+[Apr 26, 2022; 05:43 PM] [Connection]: CONNECT tunnel established between 127.0.0.1 and 31.13.65.36
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: 517 of 517 bytes sent from 127.0.0.1 to 31.13.65.36
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: 1869 of 1869 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: 64 of 64 bytes sent from 127.0.0.1 to 31.13.65.36
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: 102 of 102 bytes sent from 127.0.0.1 to 31.13.65.36
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: 177 of 177 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: 2748 of 2748 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: 8244 of 8244 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: 2748 of 2748 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: 4122 of 4122 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: 10240 of 10240 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: 3500 of 3500 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: 2748 of 2748 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: 2748 of 2748 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: 1374 of 1374 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: 2748 of 2748 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: 4122 of 4122 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: 9618 of 9618 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: 5496 of 5496 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: 5496 of 5496 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: 10240 of 10240 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: 2224 of 2224 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: 2460 of 2460 bytes sent from 31.13.65.36 to 127.0.0.1
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: 24 of 24 bytes sent from 127.0.0.1 to 31.13.65.36
+[Apr 26, 2022; 05:43 PM] [Data Transfer]: Total 89125 bytes exchanged between 127.0.0.1 and 31.13.65.36
+[Apr 26, 2022; 05:44 PM] [Proxy Server]: Starting proxy listener on 127.0.0.1:7878
+[Apr 26, 2022; 05:44 PM] [Proxy Server]: Listener started
+[Apr 26, 2022; 05:44 PM] [Whitelist Deny]: 127.0.0.1:53314 not in whitelist
+[Apr 26, 2022; 05:44 PM] [Whitelist Deny]: 127.0.0.1:53316 not in whitelist
