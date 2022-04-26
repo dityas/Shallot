@@ -3,14 +3,17 @@ use std::io::ErrorKind::WouldBlock;
 use std::io::Read;
 use std::io::Write;
 
+use std::sync::Arc;
+use std::sync::Mutex;
+
 use std::net::Shutdown;
 use std::net::TcpStream;
 
 use httparse::{Request, EMPTY_HEADER};
 
-// Added by Evan. Move as appropriate if needed.
 use std::str;
 
+use crate::firewall::Firewall;
 use crate::logging;
 use crate::logging::Event;
 use crate::proxy_listener::get_target_stream;
@@ -20,6 +23,7 @@ use crate::proxy_listener::Result;
 /// HTTP responses from the proxy server
 /// HTTP response for 200 OK
 const HTTP_OK: &[u8] = "HTTP/1.1 200 OK\r\n\r\n".as_bytes();
+const HTTP_NOT_AUTH: &[u8] = "HTTP/1.1 403 Forbidden\r\n\r\n".as_bytes();
 
 /// Parse request into a well defined request type
 /// For now, the proxy only supports GET and CONNECT requests
@@ -92,17 +96,14 @@ fn read_from_tcpstream(stream: &mut TcpStream, buf: &mut [u8]) -> Result<usize> 
 /// Forward data back and forth between source and target using the TunnelBuffer struct
 struct TunnelBuffer(usize, [u8; 10240]);
 
-// Added by Evan. Move if necessary.
 fn convert_tunnel_buffer(buf: TunnelBuffer) -> Result<String> {
     match str::from_utf8(&buf.1[0..buf.0]) {
-        Ok(res) => {
-            Ok(res.to_owned()) 
-        }
-        _ => {
-            Err(ProxyError::Parse("Could not parse UTF-8 string.".to_owned()))
-        }
+        Ok(res) => Ok(res.to_owned()),
+        _ => Err(ProxyError::Parse(
+            "Could not parse UTF-8 string.".to_owned(),
+        )),
     }
-} 
+}
 
 fn tunnel_through(
     tunnel_buf: &mut TunnelBuffer,
@@ -200,13 +201,15 @@ fn tunnel(s_stream: &mut TcpStream, t_stream: &mut TcpStream) -> usize {
     total_bytes
 }
 
-pub fn process_connection(stream: &mut TcpStream) -> Result<()> {
-    let req_type = get_req_type(stream);
+pub fn process_connection(stream: &mut TcpStream, fwall: Arc<Mutex<Firewall>>) -> Result<()> {
+    let mut _fwall = fwall.lock().unwrap();
 
     let src_addr = stream
         .peer_addr()
         .map_err(|e| ProxyError::Other(format!("{:?}", e)))?
         .ip();
+
+    let req_type = get_req_type(stream);
 
     match req_type {
         Ok(ReqType::CONNECT(p)) => {
@@ -216,13 +219,42 @@ pub fn process_connection(stream: &mut TcpStream) -> Result<()> {
             );
 
             let mut t_stream = get_target_stream(&p)?;
-
-            // Respond with 200 OK
-            let _res = write_to_tcpstream(stream, HTTP_OK)?;
             let dst_addr = t_stream
                 .peer_addr()
                 .map_err(|e| ProxyError::Other(format!("{:?}", e)))?
                 .ip();
+
+            match _fwall.in_whitelist(&src_addr.to_string()) {
+                true => match _fwall.in_blacklist(&dst_addr.to_string()) {
+                    false => {
+                        logging::event_log(
+                            Event::ProxyServer,
+                            &format!("{} and {} verified", src_addr, dst_addr),
+                        );
+                    }
+
+                    true => {
+                        logging::event_log(
+                            Event::BlackListDeny,
+                            &format!("{} in blacklist", dst_addr),
+                        );
+                        let _res = write_to_tcpstream(stream, HTTP_NOT_AUTH)?;
+                        return Err(ProxyError::BlackListDeny);
+                    }
+                },
+
+                false => {
+                    logging::event_log(
+                        Event::WhiteListDeny,
+                        &format!("{} not in whitelist", src_addr),
+                    );
+                    let _res = write_to_tcpstream(stream, HTTP_NOT_AUTH)?;
+                    return Err(ProxyError::WhiteListDeny);
+                }
+            };
+
+            // Respond with 200 OK
+            let _res = write_to_tcpstream(stream, HTTP_OK)?;
 
             logging::event_log(
                 Event::Connection,

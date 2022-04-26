@@ -2529,3 +2529,126 @@ Total 9242 bytes exchanged between 127.0.0.1 and 34.98.105.146
 [Apr 26, 2022; 05:44 PM] [Proxy Server]: Listener started
 [Apr 26, 2022; 05:44 PM] [Whitelist Deny]: 127.0.0.1:53314 not in whitelist
 [Apr 26, 2022; 05:44 PM] [Whitelist Deny]: 127.0.0.1:53316 not in whitelist
+[Apr 26, 2022; 06:20 PM] [Proxy Server]: Starting proxy listener on 127.0.0.1:7878
+[Apr 26, 2022; 06:20 PM] [Proxy Server]: Listener started
+[Apr 26, 2022; 06:41 PM] [Proxy Server]: Starting proxy listener on 127.0.0.1:7878
+[Apr 26, 2022; 06:41 PM] [Proxy Server]: Listener started
+[Apr 26, 2022; 06:41 PM] [Connection]: CONNECT request for www.facebook.com:443 from 127.0.0.1
+[Apr 26, 2022; 06:41 PM] [Connection]: Got error: WhiteListDeny
+[Apr 26, 2022; 06:41 PM] [Connection]: CONNECT request for www.facebook.com:443 from 127.0.0.1
+[Apr 26, 2022; 06:41 PM] [Connection]: Got error: WhiteListDeny
+[Apr 26, 2022; 06:49 PM] [Proxy Server]: Starting proxy listener on 127.0.0.1:7878
+[Apr 26, 2022; 06:49 PM] [Proxy Server]: Listener started
+[Apr 26, 2022; 06:49 PM] [Connection]: CONNECT request for www.facebook.com:443 from 127.0.0.1
+[Apr 26, 2022; 06:49 PM] [Whitelist Deny]: 127.0.0.1 not in whitelist
+[Apr 26, 2022; 06:49 PM] [Connection]: Got error: WhiteListDeny
+[Apr 26, 2022; 06:49 PM] [Connection]: CONNECT request for www.facebook.com:443 from 127.0.0.1
+[Apr 26, 2022; 06:49 PM] [Whitelist Deny]: 127.0.0.1 not in whitelist
+[Apr 26, 2022; 06:49 PM] [Connection]: Got error: WhiteListDeny
+[Apr 26, 2022; 06:49 PM] [Connection]: CONNECT request for www.facebook.com:443 from 127.0.0.1
+[Apr 26, 2022; 06:49 PM] [Whitelist Deny]: 127.0.0.1 not in whitelist
+[Apr 26, 2022; 06:49 PM] [Connection]: Got error: WhiteListDeny
+[Apr 26, 2022; 06:52 PM] [Proxy Server]: Starting proxy listener on 127.0.0.1:7878
+[Apr 26, 2022; 06:52 PM] [Proxy Server]: Listener started
+[Apr 26, 2022; 06:52 PM] [Connection]: CONNECT request for www.facebook.com:443 from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Whitelist Deny]: 127.0.0.1 not in whitelist
+[Apr 26, 2022; 06:52 PM] [Connection]: Got error: WhiteListDeny
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: CONNECT request for firefox.settings.services.mozilla.com:443 from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Whitelist Deny]: 127.0.0.1 not in whitelist
+[Apr 26, 2022; 06:52 PM] [Connection]: Got error: WhiteListDeny
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: CONNECT request for content-signature-2.cdn.mozilla.net:443 from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Whitelist Deny]: 127.0.0.1 not in whitelist
+[Apr 26, 2022; 06:52 PM] [Connection]: Got error: WhiteListDeny
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: GET for http://detectportal.firefox.com/canonical.html from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: CONNECT request for services.addons.mozilla.org:443 from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Whitelist Deny]: 127.0.0.1 not in whitelist
+[Apr 26, 2022; 06:52 PM] [Connection]: CONNECT request for services.addons.mozilla.org:443 from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Connection]: Got error: WhiteListDeny
+[Apr 26, 2022; 06:52 PM] [Whitelist Deny]: 127.0.0.1 not in whitelist
+[Apr 26, 2022; 06:52 PM] [Connection]: Got error: WhiteListDeny
+[Apr 26, 2022; 06:52 PM] [Connection]: CONNECT request for push.services.mozilla.com:443 from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Whitelist Deny]: 127.0.0.1 not in whitelist
+[Apr 26, 2022; 06:52 PM] [Connection]: Got error: WhiteListDeny
+[Apr 26, 2022; 06:52 PM] [Connection]: CONNECT request for firefox.settings.services.mozilla.com:443 from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Whitelist Deny]: 127.0.0.1 not in whitelist
+[Apr 26, 2022; 06:52 PM] [Connection]: Got error: WhiteListDeny
+[Apr 26, 2022; 06:52 PM] [Connection]: CONNECT request for push.services.mozilla.com:443 from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Whitelist Deny]: 127.0.0.1 not in whitelist
+[Apr 26, 2022; 06:52 PM] [Connection]: Got error: WhiteListDeny
+[Apr 26, 2022; 06:52 PM] [Connection]: CONNECT request for youtube.com:443 from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Whitelist Deny]: 127.0.0.1 not in whitelist
+[Apr 26, 2022; 06:52 PM] [Connection]: Got error: WhiteListDeny
+[Apr 26, 2022; 06:52 PM] [Connection]: CONNECT request for push.services.mozilla.com:443 from 127.0.0.1
+[Apr 26, 2022; 06:52 PM] [Whitelist Deny]: 127.0.0.1 not in whitelist
+[Apr 26, 2022; 06:52 PM] [Connection]: Got error: WhiteListDeny
+[Apr 26, 2022; 06:53 PM] [Connection]: CONNECT request for youtube.com:443 from 127.0.0.1
+[Apr 26, 2022; 06:53 PM] [Whitelist Deny]: 127.0.0.1 not in whitelist
+[Apr 26, 2022; 06:53 PM] [Connection]: Got error: WhiteListDeny
+[Apr 26, 2022; 06:53 PM] [Connection]: CONNECT request for youtube.com:443 from 127.0.0.1
+[Apr 26, 2022; 06:53 PM] [Whitelist Deny]: 127.0.0.1 not in whitelist
+[Apr 26, 2022; 06:53 PM] [Connection]: Got error: WhiteListDeny
+[Apr 26, 2022; 06:53 PM] [Connection]: CONNECT request for youtube.com:443 from 127.0.0.1
+[Apr 26, 2022; 06:53 PM] [Whitelist Deny]: 127.0.0.1 not in whitelist
+[Apr 26, 2022; 06:53 PM] [Connection]: Got error: WhiteListDeny
+[Apr 26, 2022; 06:53 PM] [Connection]: CONNECT request for youtube.com:443 from 127.0.0.1
+[Apr 26, 2022; 06:53 PM] [Whitelist Deny]: 127.0.0.1 not in whitelist
+[Apr 26, 2022; 06:53 PM] [Connection]: Got error: WhiteListDeny
