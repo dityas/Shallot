@@ -17,7 +17,15 @@ Open another terminal and connect to the container again using `docker exec -it 
 curl --proxy "http://127.0.0.1:7878" "https://www.facebook.com"
 ```
 
-The server will return the information from facebook.com where the curl request was passed. The terminal with the proxy server will note its connection. Event_log.txt will record everything printed out in the terminal, and log.txt will record the connection. Statistics.txt will check event_log.txt every 5 seconds to give summary information on logs.
+Initially, this will not work. It will return a 403 request because Facebook is not on the whitelist. Now type:
+
+```
+sed -i -e '$a*.*.*.*' whitelist.txt
+```
+
+This will add the wild card, and will make it so the whitelist accepts all connections. Type `curl --proxy "http://127.0.0.1:7878" "https://www.facebook.com"` again and the server will return the information from facebook.com where the curl request was passed. The terminal with the proxy server will note its connection. Event_log.txt will record everything printed out in the terminal, and log.txt will record the connection. Statistics.txt will check event_log.txt every 5 seconds to give summary information on logs.
+
+Type `curl --proxy "http://127.0.0.1:7878" "https://www.facebook.com"` one more time. You will get the curl request results again, but note that the server has noted that this result is now a part of the cache and skipped actually connecting with the website.
 
 ### Crates used
 * **Chrono:** Obtains datetime data.
@@ -47,5 +55,6 @@ The following crates have been removed causing software conflicts.
 ### Deliverable 3
 
 * The server now has implementation in the form of the aforementioend firewall. Instead of simply checking the request, it is now properly rejected. We decided to not implement multi-layering, as the investment of development was not worth separating the whitelist and blacklist checks. Instead, we check them both on a single server.
+* The blacklist and whitelist now reject lines not in the IPV4 format. They also allow for the use of wildcards. For instance, 172.0.0.* will match with 172.0.0.1, 172.0.0.2, and so on.
 * We have also implemented caching in the form of memcached. During a server's runtime, whenever a curl request is sent, the outcome of that event will be saved. The cache is checked before actually sending the request, and returns the result if there is one.
 * We have a statistics module that probes event_log.txt. It returns the number of connections, as well as the number of each type of event the server has encountered (e.g. denied because of the blacklist).
