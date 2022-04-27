@@ -13,6 +13,7 @@ use httparse::{Request, EMPTY_HEADER};
 
 use std::str;
 
+use crate::cache::Cache;
 use crate::firewall::Firewall;
 use crate::logging;
 use crate::logging::Event;
@@ -96,7 +97,17 @@ fn read_from_tcpstream(stream: &mut TcpStream, buf: &mut [u8]) -> Result<usize> 
 /// Forward data back and forth between source and target using the TunnelBuffer struct
 struct TunnelBuffer(usize, [u8; 10240]);
 
-fn convert_tunnel_buffer(buf: TunnelBuffer) -> Result<String> {
+#[derive(Debug)]
+enum Key {
+    TupleKey(String, String, String),
+    EmptyKey,
+}
+
+fn convert_u8_to_String(buf: &[u8]) -> String {
+    buf.iter().map(|s| *s as char).collect::<String>()
+}
+
+fn convert_tunnel_buffer(buf: &TunnelBuffer) -> Result<String> {
     match str::from_utf8(&buf.1[0..buf.0]) {
         Ok(res) => Ok(res.to_owned()),
         _ => Err(ProxyError::Parse(
@@ -163,7 +174,7 @@ fn tunnel_through(
     result
 }
 
-fn tunnel(s_stream: &mut TcpStream, t_stream: &mut TcpStream) -> usize {
+fn tunnel(s_stream: &mut TcpStream, t_stream: &mut TcpStream, cache: &Arc<Cache>) -> usize {
     let mut total_bytes = 0usize;
 
     // Init buffers for tunneling
@@ -173,6 +184,9 @@ fn tunnel(s_stream: &mut TcpStream, t_stream: &mut TcpStream) -> usize {
     // Set both streams to non blocking
     s_stream.set_nonblocking(true);
     t_stream.set_nonblocking(true);
+
+    let mut key = Key::EmptyKey;
+    let mut response = "".to_owned();
 
     loop {
         match tunnel_through(&mut source_buf, s_stream, t_stream) {
@@ -201,7 +215,11 @@ fn tunnel(s_stream: &mut TcpStream, t_stream: &mut TcpStream) -> usize {
     total_bytes
 }
 
-pub fn process_connection(stream: &mut TcpStream, fwall: Arc<Mutex<Firewall>>) -> Result<()> {
+pub fn process_connection(
+    stream: &mut TcpStream,
+    fwall: Arc<Mutex<Firewall>>,
+    cache: Arc<Cache>,
+) -> Result<()> {
     let mut _fwall = fwall.lock().unwrap();
 
     let src_addr = stream
@@ -264,7 +282,7 @@ pub fn process_connection(stream: &mut TcpStream, fwall: Arc<Mutex<Firewall>>) -
                 ),
             );
 
-            let n = tunnel(stream, &mut t_stream);
+            let n = tunnel(stream, &mut t_stream, &cache);
             logging::event_log(
                 Event::DataTransfer,
                 &format!(

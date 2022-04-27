@@ -1,11 +1,12 @@
+mod cache;
 mod firewall;
 mod logging;
 mod proxy_listener;
 mod request_handler;
 mod statistics;
 
-use std::thread;
 use statistics::generate_statistics;
+use std::thread;
 fn main() {
     // Run generate_statistics in a background thread which generates the stats from event_log.txt
     // every 5s seconds into statistics.txt file.

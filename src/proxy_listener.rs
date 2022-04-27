@@ -5,6 +5,7 @@ use std::sync::Arc;
 use std::sync::Mutex;
 use std::thread;
 
+use crate::cache::Cache;
 use crate::firewall::Firewall;
 use crate::logging;
 use crate::logging::Event;
@@ -66,14 +67,16 @@ pub fn run_listener() {
 
     let listener = get_listener(&ip, &port);
     let mut firewall = Arc::new(Mutex::new(Firewall::new()));
+    let cache = Arc::new(Cache::new().unwrap());
 
     for mut stream in listener.incoming() {
         match stream {
             Ok(mut stream) => {
                 let fwall = Arc::clone(&firewall);
+                let _cache = Arc::clone(&cache);
 
                 thread::spawn(move || {
-                    match process_connection(&mut stream, fwall) {
+                    match process_connection(&mut stream, fwall, _cache) {
                         Ok(_) => {}
                         Err(e) => {
                             logging::event_log(Event::Connection, &format!("Got error: {:?}", e));
