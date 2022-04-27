@@ -19,6 +19,8 @@ use crate::logging::Event;
 use crate::proxy_listener::get_target_stream;
 use crate::proxy_listener::ProxyError;
 use crate::proxy_listener::Result;
+use crate::payload_verification::{check_http_url, check_host, PayloadError};
+use crate::logging::Event::ProxyServer;
 
 /// HTTP responses from the proxy server
 /// HTTP response for 200 OK
@@ -65,6 +67,60 @@ fn determine_request(buf: &[u8]) -> Result<ReqType> {
 fn get_req_type(stream: &mut TcpStream) -> Result<ReqType> {
     let mut buf = [0u8; 4096];
     let read_bytes = read_from_tcpstream(stream, &mut buf)?;
+
+    match check_http_url(&buf[0..read_bytes]) {
+        Ok(ok) => {
+            if !ok {
+                return Err(ProxyError::Other("Received a request to a non HTTP url.".to_string()));
+            }
+        },
+
+        Err(PayloadError::NonHTTPUrl) => {
+            logging::event_log(
+                Event::SuspiciousActivity,
+                "Received a request to a non HTTP url."
+            );
+            return Err(ProxyError::Other("Received a request to a non HTTP url.".to_string()));
+        },
+
+        Err(PayloadError::Internal) => {
+            logging::event_log(Event::Uncategorized,
+                               "Some internal error occured in payload verification");
+        },
+
+        _ => {},
+    }
+
+    match check_host(&buf[0..read_bytes]) {
+        Ok(ok) => {
+            if !ok {
+                return Err(ProxyError::Other("Received an invalid host.".to_string()));
+            }
+        },
+        Err(PayloadError::Internal) => {
+            logging::event_log(Event::Uncategorized,
+                               "Some internal error occured in payload verification");
+        },
+        Err(PayloadError::NoHostFound) => {
+            logging::event_log(Event::Uncategorized,
+                               "Could not find host from header. Skipping host check.");
+        },
+        Err(PayloadError::MultipleHosts) => {
+            logging::event_log(
+                Event::SuspiciousActivity,
+                "Found multiple hosts in request header"
+            );
+            return Err(ProxyError::Other("Found multiple hosts in request header".to_string()));
+        },
+        Err(PayloadError::InvalidHost) => {
+            logging::event_log(
+                Event::SuspiciousActivity,
+                "Found invalid host in request header"
+            );
+            return Err(ProxyError::Other("Found invalid host in request header".to_string()));
+        },
+        _ => {}
+    }
 
     determine_request(&mut buf[0..read_bytes])
 }
@@ -163,7 +219,7 @@ fn tunnel_through(
     result
 }
 
-fn tunnel(s_stream: &mut TcpStream, t_stream: &mut TcpStream) -> usize {
+fn tunnel(s_stream: &mut TcpStream, t_stream: &mut TcpStream) -> Result<usize> {
     let mut total_bytes = 0usize;
 
     // Init buffers for tunneling
@@ -174,7 +230,21 @@ fn tunnel(s_stream: &mut TcpStream, t_stream: &mut TcpStream) -> usize {
     s_stream.set_nonblocking(true);
     t_stream.set_nonblocking(true);
 
+    // Payload limit of 100MB
+    const PAYLOAD_LIMIT: usize = 104857600;
+
     loop {
+
+        if total_bytes > PAYLOAD_LIMIT {
+            logging::event_log(
+                Event::SuspiciousActivity,
+                &format!("Total payload limit of {} exceeded. Closing connection.",
+                         PAYLOAD_LIMIT
+                )
+            );
+            return Err(ProxyError::Other("Payload limit exceeded".to_string()));
+        }
+
         match tunnel_through(&mut source_buf, s_stream, t_stream) {
             Ok(n) => {
                 total_bytes += n;
@@ -198,7 +268,7 @@ fn tunnel(s_stream: &mut TcpStream, t_stream: &mut TcpStream) -> usize {
         };
     }
 
-    total_bytes
+    Ok(total_bytes)
 }
 
 pub fn process_connection(stream: &mut TcpStream, fwall: Arc<Mutex<Firewall>>) -> Result<()> {
@@ -264,14 +334,21 @@ pub fn process_connection(stream: &mut TcpStream, fwall: Arc<Mutex<Firewall>>) -
                 ),
             );
 
-            let n = tunnel(stream, &mut t_stream);
-            logging::event_log(
-                Event::DataTransfer,
-                &format!(
-                    "Total {} bytes exchanged between {} and {}",
-                    n, src_addr, dst_addr
-                ),
-            );
+            match tunnel(stream, &mut t_stream) {
+                Ok(n) => {
+                    logging::event_log(
+                        Event::DataTransfer,
+                        &format!(
+                            "Total {} bytes exchanged between {} and {}",
+                            n, src_addr, dst_addr
+                        ),
+                    );
+                },
+                Err(err) => {
+                    return Err(err);
+                }
+            }
+
 
             Ok(())
         }
