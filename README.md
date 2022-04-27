@@ -25,8 +25,6 @@ sed -i -e '$a*.*.*.*' whitelist.txt
 
 This will add the wild card, and will make it so the whitelist accepts all connections. Type `curl --proxy "http://127.0.0.1:7878" "https://www.facebook.com"` again and the server will return the information from facebook.com where the curl request was passed. The terminal with the proxy server will note its connection. Event_log.txt will record everything printed out in the terminal, and log.txt will record the connection. Statistics.txt will check event_log.txt every 5 seconds to give summary information on logs.
 
-Type `curl --proxy "http://127.0.0.1:7878" "https://www.facebook.com"` one more time. You will get the curl request results again, but note that the server has noted that this result is now a part of the cache and skipped actually connecting with the website.
-
 ### Crates used
 * **Chrono:** Obtains datetime data.
 * **URL:** An implementation for the URL standard.
