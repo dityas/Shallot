@@ -3,6 +3,7 @@ mod logging;
 mod proxy_listener;
 mod request_handler;
 mod statistics;
+mod payload_verification;
 
 use std::thread;
 use statistics::generate_statistics;
