@@ -253,6 +253,8 @@ pub fn process_connection(stream: &mut TcpStream, fwall: Arc<Mutex<Firewall>>) -
                 }
             };
 
+            std::mem::drop(_fwall);
+
             // Respond with 200 OK
             let _res = write_to_tcpstream(stream, HTTP_OK)?;
 

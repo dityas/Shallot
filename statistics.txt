@@ -1,7 +1,7 @@
-Total number of connections: 298
-Number of whitelist deny events: 28
+Total number of connections: 506
+Number of whitelist deny events: 34
 Number of blacklist deny events: 0
-Number of data transfer events: 2567
-Number of proxy server events: 20
+Number of data transfer events: 3460
+Number of proxy server events: 58
 Number of suspicious activities events: 0
-Number of uncategorized events: 38
+Number of uncategorized events: 56
