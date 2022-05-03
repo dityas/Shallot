@@ -1,5 +1,9 @@
 # Shallot
 
+### Separate features
+
+**Cache:** https://github.com/EvanJohnston/Rust-Cache-Test.git (Note that to run this, you need memcached as a system dependency. Everything is as shown in the demo, but feel free to look through the code in detail.)
+
 ### How to run:
 Run the following commands in the terminal with the Dockerfile:
 
