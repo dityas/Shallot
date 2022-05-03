@@ -1,8 +1,6 @@
 use std::net::SocketAddr;
 use std::net::TcpListener;
 use std::net::TcpStream;
-use std::sync::Arc;
-use std::sync::Mutex;
 use std::thread;
 
 use crate::firewall::Firewall;
@@ -21,8 +19,6 @@ pub enum ProxyError {
     StreamClosed,
     CannotConnectToDest,
     IOBlocked,
-    WhiteListDeny,
-    BlackListDeny,
 }
 
 /// Open connection to the target and return the tcp stream
@@ -55,9 +51,8 @@ fn get_listener(ip: &String, port: &String) -> TcpListener {
     listener_handler
 }
 
-fn whitelist_check(addr: &SocketAddr, fwall: Arc<Mutex<Firewall>>) -> bool {
-    let mut _fwall = fwall.lock().unwrap();
-    _fwall.in_whitelist(addr.ip().to_string().as_str())
+fn whitelist_check(addr: &SocketAddr, fwall: &mut Firewall) -> bool {
+    fwall.in_whitelist(addr.ip().to_string().as_str())
 }
 
 pub fn run_listener() {
@@ -65,15 +60,13 @@ pub fn run_listener() {
     let port = String::from("7878");
 
     let listener = get_listener(&ip, &port);
-    let mut firewall = Arc::new(Mutex::new(Firewall::new()));
+    let mut firewall = Firewall::new();
 
     for mut stream in listener.incoming() {
         match stream {
             Ok(mut stream) => {
-                let fwall = Arc::clone(&firewall);
-
                 thread::spawn(move || {
-                    match process_connection(&mut stream, fwall) {
+                    match process_connection(&mut stream) {
                         Ok(_) => {}
                         Err(e) => {
                             logging::event_log(Event::Connection, &format!("Got error: {:?}", e));

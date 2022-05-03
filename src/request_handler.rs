@@ -3,27 +3,22 @@ use std::io::ErrorKind::WouldBlock;
 use std::io::Read;
 use std::io::Write;
 
-use std::sync::Arc;
-use std::sync::Mutex;
-
 use std::net::Shutdown;
 use std::net::TcpStream;
 
 use httparse::{Request, EMPTY_HEADER};
 
-use std::str;
-
-use crate::firewall::Firewall;
 use crate::logging;
 use crate::logging::Event;
 use crate::proxy_listener::get_target_stream;
 use crate::proxy_listener::ProxyError;
 use crate::proxy_listener::Result;
+use crate::payload_verification::{check_http_url, check_host, PayloadError};
+use crate::logging::Event::ProxyServer;
 
 /// HTTP responses from the proxy server
 /// HTTP response for 200 OK
 const HTTP_OK: &[u8] = "HTTP/1.1 200 OK\r\n\r\n".as_bytes();
-const HTTP_NOT_AUTH: &[u8] = "HTTP/1.1 403 Forbidden\r\n\r\n".as_bytes();
 
 /// Parse request into a well defined request type
 /// For now, the proxy only supports GET and CONNECT requests
@@ -66,6 +61,60 @@ fn get_req_type(stream: &mut TcpStream) -> Result<ReqType> {
     let mut buf = [0u8; 4096];
     let read_bytes = read_from_tcpstream(stream, &mut buf)?;
 
+    match check_http_url(&buf[0..read_bytes]) {
+        Ok(ok) => {
+            if !ok {
+                return Err(ProxyError::Other("Received a request to a non HTTP url.".to_string()));
+            }
+        },
+
+        Err(PayloadError::NonHTTPUrl) => {
+            logging::event_log(
+                Event::SuspiciousActivity,
+                "Received a request to a non HTTP url."
+            );
+            return Err(ProxyError::Other("Received a request to a non HTTP url.".to_string()));
+        },
+
+        Err(PayloadError::Internal) => {
+            logging::event_log(Event::Uncategorized,
+                               "Some internal error occured in payload verification");
+        },
+
+        _ => {},
+    }
+
+    match check_host(&buf[0..read_bytes]) {
+        Ok(ok) => {
+            if !ok {
+                return Err(ProxyError::Other("Received an invalid host.".to_string()));
+            }
+        },
+        Err(PayloadError::Internal) => {
+            logging::event_log(Event::Uncategorized,
+                               "Some internal error occured in payload verification");
+        },
+        Err(PayloadError::NoHostFound) => {
+            logging::event_log(Event::Uncategorized,
+                               "Could not find host from header. Skipping host check.");
+        },
+        Err(PayloadError::MultipleHosts) => {
+            logging::event_log(
+                Event::SuspiciousActivity,
+                "Found multiple hosts in request header"
+            );
+            return Err(ProxyError::Other("Found multiple hosts in request header".to_string()));
+        },
+        Err(PayloadError::InvalidHost) => {
+            logging::event_log(
+                Event::SuspiciousActivity,
+                "Found invalid host in request header"
+            );
+            return Err(ProxyError::Other("Found invalid host in request header".to_string()));
+        },
+        _ => {}
+    }
+
     determine_request(&mut buf[0..read_bytes])
 }
 
@@ -95,15 +144,6 @@ fn read_from_tcpstream(stream: &mut TcpStream, buf: &mut [u8]) -> Result<usize> 
 
 /// Forward data back and forth between source and target using the TunnelBuffer struct
 struct TunnelBuffer(usize, [u8; 10240]);
-
-fn convert_tunnel_buffer(buf: TunnelBuffer) -> Result<String> {
-    match str::from_utf8(&buf.1[0..buf.0]) {
-        Ok(res) => Ok(res.to_owned()),
-        _ => Err(ProxyError::Parse(
-            "Could not parse UTF-8 string.".to_owned(),
-        )),
-    }
-}
 
 fn tunnel_through(
     tunnel_buf: &mut TunnelBuffer,
@@ -163,7 +203,7 @@ fn tunnel_through(
     result
 }
 
-fn tunnel(s_stream: &mut TcpStream, t_stream: &mut TcpStream) -> usize {
+fn tunnel(s_stream: &mut TcpStream, t_stream: &mut TcpStream) -> Result<usize> {
     let mut total_bytes = 0usize;
 
     // Init buffers for tunneling
@@ -174,7 +214,21 @@ fn tunnel(s_stream: &mut TcpStream, t_stream: &mut TcpStream) -> usize {
     s_stream.set_nonblocking(true);
     t_stream.set_nonblocking(true);
 
+    // Payload limit of 10MB
+    const PAYLOAD_LIMIT: usize = 10485760;
+
     loop {
+
+        if total_bytes > PAYLOAD_LIMIT {
+            logging::event_log(
+                Event::SuspiciousActivity,
+                &format!("Total payload limit of {} exceeded. Closing connection.",
+                         PAYLOAD_LIMIT
+                )
+            );
+            return Err(ProxyError::Other("Payload limit exceeded".to_string()));
+        }
+
         match tunnel_through(&mut source_buf, s_stream, t_stream) {
             Ok(n) => {
                 total_bytes += n;
@@ -198,18 +252,16 @@ fn tunnel(s_stream: &mut TcpStream, t_stream: &mut TcpStream) -> usize {
         };
     }
 
-    total_bytes
+    Ok(total_bytes)
 }
 
-pub fn process_connection(stream: &mut TcpStream, fwall: Arc<Mutex<Firewall>>) -> Result<()> {
-    let mut _fwall = fwall.lock().unwrap();
+pub fn process_connection(stream: &mut TcpStream) -> Result<()> {
+    let req_type = get_req_type(stream);
 
     let src_addr = stream
         .peer_addr()
         .map_err(|e| ProxyError::Other(format!("{:?}", e)))?
         .ip();
-
-    let req_type = get_req_type(stream);
 
     match req_type {
         Ok(ReqType::CONNECT(p)) => {
@@ -219,44 +271,13 @@ pub fn process_connection(stream: &mut TcpStream, fwall: Arc<Mutex<Firewall>>) -
             );
 
             let mut t_stream = get_target_stream(&p)?;
+
+            // Respond with 200 OK
+            let _res = write_to_tcpstream(stream, HTTP_OK)?;
             let dst_addr = t_stream
                 .peer_addr()
                 .map_err(|e| ProxyError::Other(format!("{:?}", e)))?
                 .ip();
-
-            match _fwall.in_whitelist(&src_addr.to_string()) {
-                true => match _fwall.in_blacklist(&dst_addr.to_string()) {
-                    false => {
-                        logging::event_log(
-                            Event::ProxyServer,
-                            &format!("{} and {} verified", src_addr, dst_addr),
-                        );
-                    }
-
-                    true => {
-                        logging::event_log(
-                            Event::BlackListDeny,
-                            &format!("{} in blacklist", dst_addr),
-                        );
-                        let _res = write_to_tcpstream(stream, HTTP_NOT_AUTH)?;
-                        return Err(ProxyError::BlackListDeny);
-                    }
-                },
-
-                false => {
-                    logging::event_log(
-                        Event::WhiteListDeny,
-                        &format!("{} not in whitelist", src_addr),
-                    );
-                    let _res = write_to_tcpstream(stream, HTTP_NOT_AUTH)?;
-                    return Err(ProxyError::WhiteListDeny);
-                }
-            };
-
-            std::mem::drop(_fwall);
-
-            // Respond with 200 OK
-            let _res = write_to_tcpstream(stream, HTTP_OK)?;
 
             logging::event_log(
                 Event::Connection,
@@ -266,14 +287,21 @@ pub fn process_connection(stream: &mut TcpStream, fwall: Arc<Mutex<Firewall>>) -
                 ),
             );
 
-            let n = tunnel(stream, &mut t_stream);
-            logging::event_log(
-                Event::DataTransfer,
-                &format!(
-                    "Total {} bytes exchanged between {} and {}",
-                    n, src_addr, dst_addr
-                ),
-            );
+            match tunnel(stream, &mut t_stream) {
+                Ok(n) => {
+                    logging::event_log(
+                        Event::DataTransfer,
+                        &format!(
+                            "Total {} bytes exchanged between {} and {}",
+                            n, src_addr, dst_addr
+                        ),
+                    );
+                },
+                Err(err) => {
+                    return Err(err);
+                }
+            }
+
 
             Ok(())
         }
